@@ -1,0 +1,9 @@
+package br.com.st.anequimconta_stand_dl1.controle.listeners;
+
+import br.com.st.anequimconta_stand_dl1.entidade.Pedido;
+
+public interface ListenerControlePedidoCorrente {
+
+    void pedidoCorrenteOk(Pedido pedido) ;
+    void pedidoErro(String msg) ;
+}

@@ -1,0 +1,730 @@
+[
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_user.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_conta_bitmap.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_conta_bitmap.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-anydpi-v26_ic_logo_st2.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-anydpi-v26\\ic_logo_st2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ir_direita.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ir_direita.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_autentic.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_autentic.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_logo_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_logo_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_valor.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_valor.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_logo_st2_background.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_logo_st2_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_entrada.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_entrada.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_logo_st2.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_logo_st2.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_logo_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_logo_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_pagamento.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_pagamento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_sinal_mais.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_sinal_mais.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_back_verde.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\back_verde.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_acompanhamemto.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_acompanhamemto.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_ok.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_ok.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo_st_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo_st_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-anydpi-v26_ic_logo.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-anydpi-v26\\ic_logo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_transferencia.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_transferencia.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_caixa.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_caixa.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_logo_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_logo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\menu_activity_main_drawer.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\menu\\activity_main_drawer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_produto.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_produto.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_terminal.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_terminal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_logo_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_logo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_contas_pagas.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_contas_pagas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_logo_background.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_logo_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_modalidade.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_modalidade.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_qrcode.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_qrcode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo_st.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo_st.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_tranferir.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_tranferir.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_menos_1.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_menos_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_logo_st.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_logo_st.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_pedido.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_pedido.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_principal.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_principal.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_list_cartao.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_list_cartao.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_logo_st_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_logo_st_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_logo_st2.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_logo_st2.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_grade_produto.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_grade_produto.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_alert_usuario_acesso.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\alert_usuario_acesso.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_conf_grade_mais_vendidos.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_conf_grade_mais_vendidos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_app_bar_main.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\app_bar_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_logo.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_logo.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_grade_customizado.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\grade_customizado.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_qr_code_ticket.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_qr_code_ticket.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_mais_1.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_mais_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_reimprimir.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_reimprimir.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_venda.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_venda.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_botao_customizado.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\botao_customizado.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_st2_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo_st2_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_back_vermelho.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\back_vermelho.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_start.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_configuracao.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_configuracao.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_config.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_configuracao_nfce.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_configuracao_nfce.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_sinal_menos.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_sinal_menos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_logo_st2_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_logo_st2_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_st_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo_st_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_cancelamento.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_cancelamento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_produto_add.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_produto_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_impressao.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_impressao.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_logo_st2_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_logo_st2_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_st2_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo_st2_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-anydpi-v26_ic_logo_st_round.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-anydpi-v26\\ic_logo_st_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_pix.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_pix.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_notification.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_st2.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo_st2.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-anydpi-v26_ic_logo_st.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-anydpi-v26\\ic_logo_st.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_caixa.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_caixa.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_logo_st_background.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_logo_st_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_logo_st2.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_logo_st2.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_logo.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_logo.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_download.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_download.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_transferencia.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_transferencia.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_painel_contas.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_painel_contas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_qrcode_ticket.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_qrcode_ticket.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_logo_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_logo_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_atualizar.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_atualizar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_carrinho.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_carrinho.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_captura.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_captura.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_cancelamento.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_cancelamento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_type_payment_util.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_type_payment_util.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_codbarras.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_codbarras.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_menu_slideshow.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_text_customizado.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\text_customizado.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_password.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_operacional.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_operacional.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_edit.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_teclado.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_teclado.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_logo_st.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_logo_st.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_pagamento.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_pagamento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_conf_mod_pos.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_conf_mod_pos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_st.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo_st.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_logo_st.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_logo_st.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_logo_st_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_logo_st_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_pedido_corrente.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_pedido_corrente.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_logo_st2_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_logo_st2_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_cancelar.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_cancelar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo_st2_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo_st2_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_menu_gallery.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_menu_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_logo_st2_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_logo_st2_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_list_pix.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_list_pix.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_logo.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_logo.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_logo_st2_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_logo_st2_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo_st2_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo_st2_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\menu_main.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\menu\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_play.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_play.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_contas_pagas.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_contas_pagas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_menu_camera.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_menu_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ir_enviar.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ir_enviar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_contas_pagas.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_contas_pagas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_logo_st2_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_logo_st2_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_edit_customizado.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\edit_customizado.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxhdpi_ic_logo_st_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxhdpi\\ic_logo_st_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_carrinho.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_carrinho.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_mais.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_mais.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_cancelamento.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_cancelamento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_painel_conta.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_painel_conta.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_logo_st_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_logo_st_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_lixeira.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_lixeira.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_contador.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\contador.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_conta_print.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_conta_print.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_carrinho.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_carrinho.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_print.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_print.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_envio_pedidos.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_envio_pedidos.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_configucacoes_operacionais.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_configucacoes_operacionais.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_registro.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_registro.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_resumo_pagamento.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_resumo_pagamento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_pos_pix_pagamento.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_pos_pix_pagamento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "br.com.st.anequimconta_stand_dl1.app-debug-4:/layout_activity_add_pedido.xml.flat",
+        "source": "br.com.st.anequimconta_stand_dl1.app-main-6:/layout/activity_add_pedido.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_add_pedido.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_add_pedido.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_cartao.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_cartao.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_globo.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_globo.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo_st_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo_st_foreground.webp"
+    },
+    {
+        "merged": "br.com.st.anequimconta_stand_dl1.app-debug-4:/drawable_baseline_credit_card_24.xml.flat",
+        "source": "br.com.st.anequimconta_stand_dl1.app-main-6:/drawable/baseline_credit_card_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_contas.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_contas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_cartao_credito.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_cartao_credito.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_cifrao.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_cifrao.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_side_nav_bar.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-anydpi-v26_ic_logo_round.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-anydpi-v26\\ic_logo_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_conta.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_conta.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_pos_pagamento.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_pos_pagamento.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-anydpi-v26_ic_logo_st2_round.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-anydpi-v26\\ic_logo_st2_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_logo_st_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_logo_st_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo_st2.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo_st2.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xxxhdpi_ic_logo_st_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xxxhdpi\\ic_logo_st_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_acompanhamemto_item.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_acompanhamemto_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_cliente_destinatario.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_cliente_destinatario.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-xhdpi_ic_logo_round.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-xhdpi\\ic_logo_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_pedido_vendas.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_pedido_vendas.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_code_scanner_24.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_code_scanner_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_fragment_pedido_corrente.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_pedido_corrente.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_nav_header_main.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_id_add.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\id_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_back_space.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_back_space.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_st_foreground.webp.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo_st_foreground.webp"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_content_main.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\content_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_imprimir_contas.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_imprimir_contas.xml"
+    }
+]

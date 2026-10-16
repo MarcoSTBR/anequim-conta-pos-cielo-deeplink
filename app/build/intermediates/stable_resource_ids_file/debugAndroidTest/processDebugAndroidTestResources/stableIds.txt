@@ -1,0 +1,2 @@
+br.com.st.anequimconta_stand_dl1.test:style/WhiteBackgroundTheme = 0x7f010001
+br.com.st.anequimconta_stand_dl1.test:style/WhiteBackgroundDialogTheme = 0x7f010000

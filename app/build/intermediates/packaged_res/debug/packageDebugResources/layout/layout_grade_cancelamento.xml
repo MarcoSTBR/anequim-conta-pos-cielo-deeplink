@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_customizado"
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_descricao_quant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:layout_toStartOf="@id/layout_controle"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/quantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="20dp"
+            android:text="10"
+            android:textColor="@color/colorPreto"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="COCA COLA 300ML"
+            android:textAlignment="center"
+            android:textColor="@color/colorPreto"
+            android:textStyle="bold" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/produto_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="COCA COLA 300ML"
+            android:textColor="@color/colorPreto"
+            android:textAlignment="center"
+            android:textSize="10dp"
+            android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/layout_controle_quantidade"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/text_customizado"
+                >
+                <ImageButton
+                    android:id="@+id/menos_um"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/text_customizado"
+                    android:src="@drawable/ic_sinal_menos"
+                    />
+                <TextView
+                    android:id="@+id/quantidade_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@id/menos_um"
+                    android:text="5"
+                    android:textStyle="bold"
+                    android:background="@drawable/text_customizado"
+                    android:textSize="30dp"/>
+                <ImageButton
+                    android:id="@+id/mais_um"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/quantidade_item"
+                    android:background="@drawable/text_customizado"
+                    android:src="@drawable/ic_mais"
+                    />
+            </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_controle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        >
+
+        <ImageButton
+            android:id="@+id/cancelar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/edit_customizado"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_lixeira" />
+
+    </LinearLayout>
+</RelativeLayout>

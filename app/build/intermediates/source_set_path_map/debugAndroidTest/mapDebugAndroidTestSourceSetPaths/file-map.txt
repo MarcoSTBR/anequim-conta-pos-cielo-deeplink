@@ -1,0 +1,5 @@
+br.com.st.anequimconta_stand_dl1.test.app-androidTest-0 C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\build\generated\res\resValues\androidTest\debug
+br.com.st.anequimconta_stand_dl1.test.app-mergeDebugAndroidTestResources-1 C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+br.com.st.anequimconta_stand_dl1.test.app-mergeDebugAndroidTestResources-2 C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+br.com.st.anequimconta_stand_dl1.test.app-debugAndroidTest-3 C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+br.com.st.anequimconta_stand_dl1.test.app-jetified-core-1.6.1-4 C:\Users\Marco\.gradle\caches\transforms-4\262b48ef54011f18ee2f7b5f82b060c1\transformed\jetified-core-1.6.1\res

@@ -1,0 +1,456 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="br.com.st.anequimconta_stand_dl1"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="25"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+12-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:6:5-75
+12-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:6:22-72
+13    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+13-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:7:5-77
+13-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:7:22-74
+14    <uses-permission android:name="android.permission.NFC" />
+14-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:8:5-62
+14-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:8:22-59
+15
+16    <uses-feature
+16-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:9:5-81
+17        android:name="android.hardware.nfc"
+17-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:9:19-54
+18        android:required="true" />
+18-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:9:55-78
+19
+20    <uses-permission android:name="cielo.lio.permission.PRINTER" />
+20-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:10:5-68
+20-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:10:22-65
+21    <uses-permission android:name="cielo.lio.permission.ORDER_SERVICE" />
+21-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:11:5-74
+21-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:11:22-71
+22    <uses-permission android:name="cielo.smart.permission.PRINTER" />
+22-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:12:5-70
+22-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:12:22-67
+23    <uses-permission android:name="cielo.lio.mifare.permission.CONNECT" />
+23-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:13:5-75
+23-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:13:22-72
+24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+24-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:14:5-79
+24-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:14:22-76
+25    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+25-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:16:5-82
+25-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:16:22-79
+26    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+26-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:17:5-80
+26-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:17:22-77
+27    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+27-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:18:5-81
+27-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:18:22-78
+28    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+28-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:19:5-21:53
+28-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:20:9-61
+29
+30    <permission
+30-->[androidx.core:core:1.13.0] C:\Users\Marco\.gradle\caches\transforms-4\9224d42510f00cbb5233e23f28aad772\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+31        android:name="br.com.st.anequimconta_stand_dl1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+31-->[androidx.core:core:1.13.0] C:\Users\Marco\.gradle\caches\transforms-4\9224d42510f00cbb5233e23f28aad772\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+32        android:protectionLevel="signature" />
+32-->[androidx.core:core:1.13.0] C:\Users\Marco\.gradle\caches\transforms-4\9224d42510f00cbb5233e23f28aad772\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+33
+34    <uses-permission android:name="br.com.st.anequimconta_stand_dl1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+34-->[androidx.core:core:1.13.0] C:\Users\Marco\.gradle\caches\transforms-4\9224d42510f00cbb5233e23f28aad772\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.13.0] C:\Users\Marco\.gradle\caches\transforms-4\9224d42510f00cbb5233e23f28aad772\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+35    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:22:5-65
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:22:22-62
+36    <uses-feature
+36-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:25:5-27:36
+37        android:name="android.hardware.camera"
+37-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:26:9-47
+38        android:required="false" />
+38-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:27:9-33
+39    <uses-feature
+39-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+40        android:name="android.hardware.camera.front"
+40-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+41        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+41-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+42    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+43    <uses-feature
+43-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+44        android:name="android.hardware.camera.autofocus"
+44-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+45        android:required="false" />
+45-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+46    <uses-feature
+46-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+47        android:name="android.hardware.camera.flash"
+47-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+48        android:required="false" />
+48-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+49    <uses-feature
+49-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+50        android:name="android.hardware.screen.landscape"
+50-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+51        android:required="false" />
+51-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+52    <uses-feature
+52-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+53        android:name="android.hardware.wifi"
+53-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+54        android:required="false" />
+54-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+55
+56    <application
+56-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:12:5-141:19
+57        android:allowBackup="true"
+57-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:13:9-35
+58        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+58-->[androidx.core:core:1.13.0] C:\Users\Marco\.gradle\caches\transforms-4\9224d42510f00cbb5233e23f28aad772\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+59        android:dataExtractionRules="@xml/data_extraction_rules"
+59-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:14:9-65
+60        android:debuggable="true"
+61        android:extractNativeLibs="false"
+62        android:fullBackupContent="@xml/backup_rules"
+62-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:15:9-54
+63        android:icon="@mipmap/ic_logo_st2"
+63-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:16:9-43
+64        android:label="@string/app_name"
+64-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:17:9-41
+65        android:roundIcon="@mipmap/ic_logo_st2"
+65-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:18:9-48
+66        android:supportsRtl="true"
+66-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:19:9-35
+67        android:testOnly="true"
+68        android:theme="@style/Theme.AnequimContaPOS.NoActionBar"
+68-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:20:9-65
+69        android:usesCleartextTraffic="true" >
+69-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:21:9-44
+70        <service
+70-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:24:9-28:58
+71            android:name="com.cielo.ordermanager.sdk.sample.services.DeepLinkService"
+71-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:25:13-86
+72            android:exported="false"
+72-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:26:13-37
+73            android:foregroundServiceType="dataSync" />
+73-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:27:13-53
+74
+75        <activity
+75-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:30:9-44:20
+76            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityReimprimir"
+76-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:31:13-56
+77            android:exported="true"
+77-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:32:13-36
+78            android:launchMode="singleTop" >
+78-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:33:13-43
+79            <intent-filter>
+79-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:34:13-43:29
+80                <action android:name="android.intent.action.VIEW" />
+80-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:35:17-69
+80-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:35:25-66
+81
+82                <category android:name="android.intent.category.DEFAULT" />
+82-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:37:17-76
+82-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:37:27-73
+83                <category android:name="android.intent.category.BROWSABLE" />
+83-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:38:17-78
+83-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:38:27-75
+84
+85                <data
+85-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:40:17-42:68
+86                    android:host="reprint"
+86-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:41:21-43
+87                    android:scheme="@string/scheme_caixa_return" />
+87-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:42:21-65
+88            </intent-filter>
+89        </activity>
+90        <activity
+90-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:45:9-59:20
+91            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityCancelamento"
+91-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:46:13-58
+92            android:exported="true"
+92-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:47:13-36
+93            android:launchMode="singleTop" >
+93-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:48:13-43
+94            <intent-filter>
+94-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:49:13-58:29
+95                <action android:name="android.intent.action.VIEW" />
+95-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:35:17-69
+95-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:35:25-66
+96
+97                <category android:name="android.intent.category.DEFAULT" />
+97-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:37:17-76
+97-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:37:27-73
+98                <category android:name="android.intent.category.BROWSABLE" />
+98-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:38:17-78
+98-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:38:27-75
+99
+100                <data
+100-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:40:17-42:68
+101                    android:host="cancel"
+101-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:41:21-43
+102                    android:scheme="@string/scheme_return_capture" />
+102-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:42:21-65
+103            </intent-filter>
+104        </activity>
+105        <activity
+105-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:60:9-71:20
+106            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityCaptura"
+106-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:61:13-53
+107            android:exported="true"
+107-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:62:13-36
+108            android:launchMode="singleTop" >
+108-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:63:13-43
+109            <intent-filter>
+109-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:64:13-70:29
+110                <action android:name="android.intent.action.VIEW" />
+110-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:35:17-69
+110-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:35:25-66
+111
+112                <category android:name="android.intent.category.DEFAULT" />
+112-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:37:17-76
+112-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:37:27-73
+113
+114                <data
+114-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:40:17-42:68
+115                    android:host="@string/intent_host"
+115-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:41:21-43
+116                    android:scheme="@string/intent_scheme_same_activity" />
+116-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:42:21-65
+117            </intent-filter>
+118        </activity>
+119        <activity
+119-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:72:9-86:20
+120            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityImpressao"
+120-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:73:13-55
+121            android:exported="true"
+121-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:74:13-36
+122            android:launchMode="singleTop" >
+122-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:75:13-43
+123            <intent-filter>
+123-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:76:13-85:29
+124                <action android:name="android.intent.action.VIEW" />
+124-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:35:17-69
+124-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:35:25-66
+125
+126                <category android:name="android.intent.category.DEFAULT" />
+126-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:37:17-76
+126-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:37:27-73
+127                <category android:name="android.intent.category.BROWSABLE" />
+127-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:38:17-78
+127-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:38:27-75
+128
+129                <data
+129-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:40:17-42:68
+130                    android:host="print"
+130-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:41:21-43
+131                    android:scheme="@string/scheme_caixa_return" />
+131-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:42:21-65
+132            </intent-filter>
+133        </activity>
+134        <activity
+134-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:87:9-89:40
+135            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityConfigucacoesOperacionais"
+135-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:88:13-103
+136            android:exported="false" />
+136-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:89:13-37
+137        <activity
+137-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:90:9-92:40
+138            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityConfiguracaoNfce"
+138-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:91:13-94
+139            android:exported="false" />
+139-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:92:13-37
+140        <activity
+140-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:93:9-95:40
+141            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityQrCodeTicket"
+141-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:94:13-90
+142            android:exported="false" />
+142-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:95:13-37
+143        <activity
+143-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:96:9-98:40
+144            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityImprimirContas"
+144-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:97:13-92
+145            android:exported="false" />
+145-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:98:13-37
+146        <activity
+146-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:99:9-101:40
+147            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityPainelContas"
+147-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:100:13-90
+148            android:exported="false" />
+148-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:101:13-37
+149        <activity
+149-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:102:9-104:40
+150            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityEnvioPedidos"
+150-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:103:13-90
+151            android:exported="false" />
+151-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:104:13-37
+152        <activity
+152-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:105:9-107:40
+153            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityConfiguracao"
+153-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:106:13-90
+154            android:exported="false" />
+154-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:107:13-37
+155        <activity
+155-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:108:9-110:40
+156            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityProdutoAdd"
+156-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:109:13-88
+157            android:exported="false" />
+157-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:110:13-37
+158        <activity
+158-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:111:9-113:40
+159            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityTerminal"
+159-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:112:13-86
+160            android:exported="false" />
+160-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:113:13-37
+161        <activity
+161-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:114:9-116:40
+162            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityLogin"
+162-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:115:13-83
+163            android:exported="false" />
+163-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:116:13-37
+164        <activity
+164-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:117:9-119:40
+165            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityRegistro"
+165-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:118:13-86
+166            android:exported="false" />
+166-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:119:13-37
+167        <activity
+167-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:120:9-122:40
+168            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityAddPedido"
+168-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:121:13-87
+169            android:exported="false" />
+169-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:122:13-37
+170        <activity
+170-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:123:9-126:72
+171            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityPrincipal"
+171-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:124:13-87
+172            android:exported="false"
+172-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:125:13-37
+173            android:theme="@style/Theme.AnequimContaPOS.NoActionBar" />
+173-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:126:13-69
+174        <activity
+174-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:127:9-130:49
+175            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+175-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:128:13-74
+176            android:clearTaskOnLaunch="true"
+176-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+177            android:screenOrientation="fullSensor"
+177-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:129:13-51
+178            android:stateNotNeeded="true"
+178-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+179            android:theme="@style/zxing_CaptureTheme"
+179-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+180            android:windowSoftInputMode="stateAlwaysHidden" />
+180-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Marco\.gradle\caches\transforms-4\79b28f2c2d8de02c6e7a7516390b5b9b\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+181        <activity
+181-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:131:9-139:20
+182            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityEntrada"
+182-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:132:13-85
+183            android:exported="true" >
+183-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:133:13-36
+184            <intent-filter>
+184-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:134:13-138:29
+185                <action android:name="android.intent.action.MAIN" />
+185-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:135:17-69
+185-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:135:25-66
+186
+187                <category android:name="android.intent.category.LAUNCHER" />
+187-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:137:17-77
+187-->C:\ST\ProjetoAnequimPlus\AppCielo\Conta\app\src\main\AndroidManifest.xml:137:27-74
+188            </intent-filter>
+189        </activity>
+190
+191        <meta-data
+191-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:27:9-29:41
+192            android:name="cs_integration_type"
+192-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:28:13-47
+193            android:value="sdk-2.7.2" />
+193-->[order-manager-2.7.2.aar] C:\Users\Marco\.gradle\caches\transforms-4\d502f8c18ed490d7ff681b9a0bebb2a2\transformed\jetified-order-manager-2.7.2\AndroidManifest.xml:29:13-38
+194
+195        <provider
+195-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Marco\.gradle\caches\transforms-4\e078ab87d310ab9c07697a48458c5cba\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+196            android:name="androidx.startup.InitializationProvider"
+196-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Marco\.gradle\caches\transforms-4\e078ab87d310ab9c07697a48458c5cba\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:25:13-67
+197            android:authorities="br.com.st.anequimconta_stand_dl1.androidx-startup"
+197-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Marco\.gradle\caches\transforms-4\e078ab87d310ab9c07697a48458c5cba\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:26:13-68
+198            android:exported="false" >
+198-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Marco\.gradle\caches\transforms-4\e078ab87d310ab9c07697a48458c5cba\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:27:13-37
+199            <meta-data
+199-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Marco\.gradle\caches\transforms-4\e078ab87d310ab9c07697a48458c5cba\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+200                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+200-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Marco\.gradle\caches\transforms-4\e078ab87d310ab9c07697a48458c5cba\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:30:17-75
+201                android:value="androidx.startup" />
+201-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Marco\.gradle\caches\transforms-4\e078ab87d310ab9c07697a48458c5cba\transformed\jetified-emoji2-1.3.0\AndroidManifest.xml:31:17-49
+202            <meta-data
+202-->[androidx.lifecycle:lifecycle-process:2.8.4] C:\Users\Marco\.gradle\caches\transforms-4\8a955b1d8612578b898d6430ec605d24\transformed\jetified-lifecycle-process-2.8.4\AndroidManifest.xml:29:13-31:52
+203                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+203-->[androidx.lifecycle:lifecycle-process:2.8.4] C:\Users\Marco\.gradle\caches\transforms-4\8a955b1d8612578b898d6430ec605d24\transformed\jetified-lifecycle-process-2.8.4\AndroidManifest.xml:30:17-78
+204                android:value="androidx.startup" />
+204-->[androidx.lifecycle:lifecycle-process:2.8.4] C:\Users\Marco\.gradle\caches\transforms-4\8a955b1d8612578b898d6430ec605d24\transformed\jetified-lifecycle-process-2.8.4\AndroidManifest.xml:31:17-49
+205            <meta-data
+205-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+206                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+206-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+207                android:value="androidx.startup" />
+207-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+208        </provider>
+209
+210        <uses-library
+210-->[androidx.window:window:1.0.0] C:\Users\Marco\.gradle\caches\transforms-4\4d241540ada869d82df9334c9e3814ca\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+211            android:name="androidx.window.extensions"
+211-->[androidx.window:window:1.0.0] C:\Users\Marco\.gradle\caches\transforms-4\4d241540ada869d82df9334c9e3814ca\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+212            android:required="false" />
+212-->[androidx.window:window:1.0.0] C:\Users\Marco\.gradle\caches\transforms-4\4d241540ada869d82df9334c9e3814ca\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+213        <uses-library
+213-->[androidx.window:window:1.0.0] C:\Users\Marco\.gradle\caches\transforms-4\4d241540ada869d82df9334c9e3814ca\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+214            android:name="androidx.window.sidecar"
+214-->[androidx.window:window:1.0.0] C:\Users\Marco\.gradle\caches\transforms-4\4d241540ada869d82df9334c9e3814ca\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+215            android:required="false" />
+215-->[androidx.window:window:1.0.0] C:\Users\Marco\.gradle\caches\transforms-4\4d241540ada869d82df9334c9e3814ca\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+216
+217        <receiver
+217-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+218            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+218-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+219            android:directBootAware="false"
+219-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+220            android:enabled="true"
+220-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+221            android:exported="true"
+221-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+222            android:permission="android.permission.DUMP" >
+222-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+223            <intent-filter>
+223-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+224                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+224-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+224-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+225            </intent-filter>
+226            <intent-filter>
+226-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+227                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+227-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+227-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+228            </intent-filter>
+229            <intent-filter>
+229-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+230                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+230-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+230-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+231            </intent-filter>
+232            <intent-filter>
+232-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+233                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+233-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+233-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Marco\.gradle\caches\transforms-4\edcddd8bd966335cdd8331c0829b38dc\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+234            </intent-filter>
+235        </receiver>
+236    </application>
+237
+238</manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.st.anequimconta_stand_dl1.ui.FragmentContasPagas">
+
+    <RelativeLayout
+        android:id="@+id/layout_pedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/grade_customizado"
+        >
+        <TextView
+            android:id="@+id/data_inicial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="10/05/2004 12:00"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_toStartOf="@id/bt_atualizar"
+
+            />
+        <ImageButton
+            android:id="@+id/bt_atualizar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_atualizar"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/botao_customizado"
+            />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/grade_contas_pagas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="2"
+        tools:listitem="@layout/layout_grade_contas_pagas" />
+
+
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.st.anequimconta_stand_dl1.ui.FragmentCarrinho">
+
+    <LinearLayout
+        android:id="@+id/layout_pedido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/numero_pedido"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="@color/colorBranco"
+            android:text="10"
+            android:background="@color/principal"/>
+
+
+        <RelativeLayout
+            android:id="@+id/carrinho_cab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/principal">
+
+            <LinearLayout
+                android:id="@+id/cabecalho_painel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/lerCodigoBarras"
+                android:layout_toLeftOf="@id/escreverCodigoBarras"
+                android:orientation="vertical"
+                >
+
+                <EditText
+                    android:id="@+id/codbarras"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/principal"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPreto"
+                    android:textStyle="bold"
+
+                    />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/lerCodigoBarras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_codbarras" />
+            <ImageButton
+                android:id="@+id/escreverCodigoBarras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_teclado" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grade_item_venda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            tools:itemCount="10"
+            tools:listitem="@layout/layout_grade_carrinho" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/BtEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/ir_enviar"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="20dp"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/BtVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:src="@drawable/ic_back_space"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

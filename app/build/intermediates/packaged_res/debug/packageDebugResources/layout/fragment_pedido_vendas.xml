@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.st.anequimconta_stand_dl1.ui.FragmentPedidoVendas">
+
+    <LinearLayout
+        android:id="@+id/layout_pedido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        android:background="@drawable/grade_customizado">
+        <TextView
+            android:id="@+id/numero_pedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:text="10"/>
+
+     <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_carrinho"
+                android:layout_width="match_parent"
+                app:tabSelectedTextAppearance="@style/CustomTabGradeSelecionado"
+                app:tabMode="scrollable"
+                app:tabTextAppearance="@style/CustomTabGrade"
+                android:layout_height="match_parent"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/frag_view_pager_carrinho"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/BtEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/ir_enviar"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="20dp"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/BtVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:src="@drawable/ic_back_space"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/BtIrCarrinho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:src="@drawable/ic_carrinho"
+        android:layout_marginBottom="30dp"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

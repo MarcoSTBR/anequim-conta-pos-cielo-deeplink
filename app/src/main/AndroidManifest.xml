@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_logo_st2"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_st2"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AnequimContaPOS.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,roundIcon,android:theme"
+        tools:targetApi="31">
+        <service
+            android:name="com.cielo.ordermanager.sdk.sample.services.DeepLinkService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"
+            tools:ignore="ForegroundServicePermission" />
+
+        <activity
+            android:name=".activity.ActivityReimprimir"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="reprint"
+                    android:scheme="@string/scheme_caixa_return" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityCancelamento"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cancel"
+                    android:scheme="@string/scheme_return_capture" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityCaptura"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="@string/intent_host"
+                    android:scheme="@string/intent_scheme_same_activity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ActivityImpressao"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="print"
+                    android:scheme="@string/scheme_caixa_return" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityConfigucacoesOperacionais"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityConfiguracaoNfce"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityQrCodeTicket"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityImprimirContas"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityPainelContas"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityEnvioPedidos"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityConfiguracao"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityProdutoAdd"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityTerminal"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityLogin"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityRegistro"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityAddPedido"
+            android:exported="false" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityPrincipal"
+            android:exported="false"
+            android:theme="@style/Theme.AnequimContaPOS.NoActionBar" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="fullSensor"
+            tools:replace="screenOrientation" />
+        <activity
+            android:name="br.com.st.anequimconta_stand_dl1.activity.ActivityEntrada"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

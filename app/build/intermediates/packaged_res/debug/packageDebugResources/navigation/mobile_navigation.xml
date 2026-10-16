@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_pedido_corrente">
+
+    <fragment
+        android:id="@+id/nav_pedido_corrente"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentPedidoCorrente"
+        android:label="@string/pedido_corrente"
+        tools:layout="@layout/fragment_pedido_corrente" >
+        <action
+            android:id="@+id/action_nav_pedido_corrente_to_nav_pedido_vendas"
+            app:destination="@id/nav_pedido_vendas" />
+        <action
+            android:id="@+id/action_nav_pedido_corrente_to_nav_conta"
+            app:destination="@id/nav_conta" />
+        <action
+            android:id="@+id/action_nav_pedido_corrente_to_nav_pagamento"
+            app:destination="@id/nav_pagamento" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pedido_vendas"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentPedidoVendas"
+        android:label="@string/pedido_venda"
+        tools:layout="@layout/fragment_pedido_vendas" >
+        <action
+            android:id="@+id/action_nav_pedido_vendas_to_nav_carrinho"
+            app:destination="@id/nav_carrinho" />
+        <action
+            android:id="@+id/action_nav_pedido_vendas_to_nav_conta"
+            app:destination="@id/nav_conta" />
+        <action
+            android:id="@+id/action_nav_pedido_vendas_to_nav_pagamento"
+            app:destination="@id/nav_pagamento" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_carrinho"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentCarrinho"
+        android:label="@string/carrinho"
+        tools:layout="@layout/fragment_carrinho" >
+        <action
+            android:id="@+id/action_nav_carrinho_to_nav_conta"
+            app:destination="@id/nav_conta" />
+        <action
+            android:id="@+id/action_nav_carrinho_to_nav_pagamento"
+            app:destination="@id/nav_pagamento" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_cancelamento"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentCancelamento"
+        android:label="@string/cancelamento"
+        tools:layout="@layout/fragment_cancelamento" />
+    <fragment
+        android:id="@+id/nav_transferencia"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentTransferencia"
+        android:label="@string/transferencia"
+        tools:layout="@layout/fragment_transferencia" />
+
+    <fragment
+        android:id="@+id/nav_caixa"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentCaixa"
+        android:label="@string/caixa"
+        tools:layout="@layout/fragment_caixa" />
+
+    <fragment
+        android:id="@+id/nav_pagamento"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentPagamento"
+        android:label="@string/pagamento"
+        tools:layout="@layout/fragment_pagamento" />
+
+    <fragment
+        android:id="@+id/nav_conta"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentConta"
+        android:label="@string/conta"
+        tools:layout="@layout/fragment_conta" />
+    <fragment
+        android:id="@+id/nav_conta_pagas"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentContasPagas"
+        android:label="@string/conta_pagas"
+        tools:layout="@layout/fragment_contas_pagas" />
+
+    <fragment
+        android:id="@+id/nav_list_cartoes"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentListCartao"
+        android:label="@string/list_cartoes"
+        tools:layout="@layout/fragment_list_cartao" />
+
+    <fragment
+        android:id="@+id/nav_list_pixs"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentListPix"
+        android:label="@string/list_pixs"
+        tools:layout="@layout/fragment_list_pix" />
+
+    <fragment
+        android:id="@+id/nav_qrcode_ticket"
+        android:name="br.com.st.anequimconta_stand_dl1.ui.FragmentQrcodeTicket"
+        android:label="@string/qrcode_ticket"
+        tools:layout="@layout/fragment_qrcode_ticket" />
+
+
+
+</navigation>

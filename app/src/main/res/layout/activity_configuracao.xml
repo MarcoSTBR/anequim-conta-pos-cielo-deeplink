@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.st.anequimconta_stand_dl1.activity.ActivityConfiguracao">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cardview_shadow_start_color" />
+
+    <TextView
+        android:id="@+id/numero_terminal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"
+        android:text="Número do Terminal :" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cardview_shadow_start_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/Largura_Impressao_Conta" />
+            <TextView
+                android:id="@+id/quant_lar_conta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="10 "
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <ImageButton
+                android:id="@+id/mais_lar_conta"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_customizado"
+                android:src="@drawable/ic_mais_1" />
+
+            <ImageButton
+                android:id="@+id/menos_lar_conta"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_customizado"
+                android:src="@drawable/ic_menos_1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/font_impressso_conta" />
+            <TextView
+                android:id="@+id/quant_font_conta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="10 "
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <ImageButton
+                android:id="@+id/mais_font_conta"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_customizado"
+                android:src="@drawable/ic_mais_1" />
+
+            <ImageButton
+                android:id="@+id/menos_font_conta"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_customizado"
+                android:src="@drawable/ic_menos_1" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/cardview_shadow_start_color" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Número de Linhas: " />
+
+            <TextView
+                android:id="@+id/quant_linhas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="10 "
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/mais_linhas"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_customizado"
+                android:src="@drawable/ic_mais_1" />
+
+            <ImageButton
+                android:id="@+id/menos_linhas"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/text_customizado"
+                android:src="@drawable/ic_menos_1" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/cardview_shadow_start_color" />
+
+        <RelativeLayout
+            android:id="@+id/layout_desmarcaar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Selecione o Grupo Mais Vendidos " />
+
+            <Button
+                android:id="@+id/desmarcar_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/text_customizado"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Desmarcar Todos"
+                android:layout_alignParentRight="true"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPreto" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grade_conf_mais_vendidos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            tools:listitem="@layout/layout_conf_grade_mais_vendidos" />
+
+    </LinearLayout>
+
+</LinearLayout>

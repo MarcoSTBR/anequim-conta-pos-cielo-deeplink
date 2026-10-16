@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.st.anequimconta_stand_dl1.activity.ActivityConfigucacoesOperacionais">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/secondaria"
+            android:layout_height="2dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/conf_param_ope"
+            android:textStyle="bold"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/secondaria"
+            android:layout_height="1dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grade_operacionais"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            tools:itemCount="5"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/layout_grade_operacional" />
+    </LinearLayout>
+
+</LinearLayout>

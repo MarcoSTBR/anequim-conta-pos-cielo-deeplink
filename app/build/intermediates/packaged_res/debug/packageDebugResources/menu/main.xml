@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/ic_menu_login"
+        android:icon="@drawable/ic_user"
+        android:title="@string/login_login"/>
+    <item
+        android:id="@+id/ic_menu_atualizar"
+        android:icon="@drawable/ic_atualizar"
+        android:title="@string/menu_atualizar"/>
+    <item
+        android:id="@+id/ic_operacional"
+        android:icon="@drawable/ic_config"
+        android:title="@string/menu_param_ope"/>
+    <item
+        android:id="@+id/ic_configuracao"
+        android:icon="@drawable/ic_config"
+        android:title="@string/menu_configuracao"/>
+    <item
+        android:id="@+id/ic_menu_nfce"
+        android:icon="@drawable/ic_conta_print"
+        android:title="@string/menu_nfce"/>
+    <item
+        android:id="@+id/ic_autenticar"
+        android:icon="@drawable/ic_autentic"
+        android:title="@string/menu_autentica"/>
+</menu>

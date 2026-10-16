@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="br.com.st.anequimconta_stand_dl1.activity.ActivityLogin">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.AnequimContaPOS"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarLogin"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.AnequimContaPOS"
+            app:titleTextColor="@color/colorBranco" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5sp"
+        android:src="@mipmap/ic_logo_st_foreground" />
+
+    <RelativeLayout
+        android:layout_width="220sp"
+        android:layout_height="30sp"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_user" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/login_login"
+            android:textAlignment="center"
+            android:textColor="@color/colorPreto"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTextUsuario"
+        android:layout_width="220sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="TESTE"
+        android:textAllCaps="false"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPreto" />
+
+    <RelativeLayout
+        android:layout_width="220sp"
+        android:layout_height="30sp"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_password" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="@string/login_senha"
+            android:textColor="@color/colorPreto" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="220sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:inputType="textPassword|textPersonName"
+        android:text="PASSSWORDSenha"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPreto" />
+
+
+    <Button
+        android:id="@+id/buttonEntrar"
+        android:layout_width="220sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5sp"
+        android:background="@drawable/botao_customizado"
+        android:text="@string/login_entrar"
+        android:textAllCaps="false"
+        android:textColor="@color/colorBranco"
+        android:textSize="25dp" />
+</LinearLayout>

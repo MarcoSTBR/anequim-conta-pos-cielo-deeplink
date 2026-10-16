@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.st.anequimconta_stand_dl1.ui.FragmentCaixa">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/painel_cabecalho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CAIXA FECHADO"
+                android:textAlignment="center"
+                android:background="@drawable/edit_customizado"
+                android:textSize="20dp"
+                android:typeface="monospace" />
+
+            <TextView
+                android:id="@+id/painel_corpo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DINHEIRO   R$ 0,00"
+                android:textAlignment="center"
+                android:typeface="monospace" />
+            <ImageView
+                android:id="@+id/imagem_demonstrativo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_rodape"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/principal"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/bt_voltar"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorBranco"
+                android:textAllCaps="false"
+                android:background="@drawable/botao_customizado"
+                android:text="@string/abertura_fechamento_voltar"/>
+            <Button
+                android:id="@+id/bt_imprimir"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorBranco"
+                android:textAllCaps="false"
+                android:background="@drawable/botao_customizado"
+                android:text="@string/abertura_fechamento_imprimir"
+                android:layout_toEndOf="@id/bt_voltar"/>
+            <Button
+                android:id="@+id/bt_abrir_fechar"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorBranco"
+                android:textAllCaps="false"
+                android:background="@drawable/botao_customizado"
+                android:text="ABRIR CAIXA"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grade_customizado"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_produto_view"
+        android:gravity="center"
+        android:background="@color/colorBranco"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/imagem_produto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_atualizar" />
+
+        <TextView
+            android:id="@+id/descricao"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:autoSizeTextType="none"
+            android:text="COCA COLA COCA COLA COCA COLA ML"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_below="@id/imagem_produto"
+            android:layout_alignStart="@id/imagem_produto"
+            />
+
+        <TextView
+            android:id="@+id/preco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="R$ 2.099,00"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_below="@id/descricao"/>
+
+        <TextView
+            android:id="@+id/quantidade"
+            android:background="@drawable/contador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textColor="@color/colorBranco"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentEnd="true"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

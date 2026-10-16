@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_customizado"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout_descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/descricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="COCA COLA 300ML"
+                android:textAlignment="center"
+                android:textColor="@color/colorPreto"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/produto_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="COCA COLA 300ML"
+                android:textColor="@color/colorPreto"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_descricao"
+            >
+
+            <ImageButton
+                android:id="@+id/mais"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edit_customizado"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_mais_1" />
+
+            <ImageButton
+                android:id="@+id/menos"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/edit_customizado"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_menos_1" />
+
+            <TextView
+                android:id="@+id/quantidade_preco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_toStartOf="@+id/menos"
+                android:layout_toEndOf="@id/mais"
+                android:text="1"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textColor="@color/colorPreto"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

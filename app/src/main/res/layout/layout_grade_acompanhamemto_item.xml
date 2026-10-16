@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_customizado"
+    >
+
+    <TextView
+        android:id="@+id/descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="PRODUTO 12112 1212 1212 121212 adsaasdasdasd"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:layout_toStartOf="@id/layout_quantidade"/>
+
+    <LinearLayout
+        android:id="@+id/layout_quantidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/mais"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_customizado"
+
+            android:src="@drawable/ic_mais_1" />
+
+        <TextView
+            android:id="@+id/quantidade"
+            android:layout_marginTop="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="5sp"
+            android:layout_marginBottom="5sp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descricao"
+            android:text="1111"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/menos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_customizado"
+            android:src="@drawable/ic_menos_1" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

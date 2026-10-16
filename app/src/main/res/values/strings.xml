@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Anequim Conta</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Anequim Conta POS</string>
+    <string name="nav_header_subtitle">ST Sistemas e Tecnologia do Brasil</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="pedido_corrente">Pedidos</string>
+    <string name="pedido_venda">Venda</string>
+    <string name="carrinho">Carrinho de Vendas</string>
+    <string name="open_drawer">open_drawer</string>
+    <string name="close_drawer">close_drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancelamento">Cancelamento</string>
+    <string name="transferencia">Transferência</string>
+    <string name="label_num_pedido">Pedido/Conta</string>
+    <string name="entrada_text">anequim.com.br</string>
+    <string name="inicial_registrar">Registrar no Gerezim</string>
+    <string name="login_entrar">Login</string>
+    <string name="login_login">Operador</string>
+    <string name="login_senha">Senha</string>
+    <string name="terminal_descricao">Descrição do Terminal</string>
+    <string name="terminal_tipo_emissao">Tipo de emissão</string>
+    <string name="terminal_confirmar">Confirmar</string>
+    <string name="menu_atualizar">Atualizar</string>
+    <string name="menu_configuracao">Configuração</string>
+    <string name="menu_nfce">NFCe</string>
+    <string name="menu_autentica">Registrar CNPJ</string>
+    <string name="produto_botao_voltar">Voltar</string>
+    <string name="produto_botao_add">Adicionar</string>
+    <string name="Caixa">Caixa</string>
+    <string name="abertura_fechamento_voltar">Voltar</string>
+    <string name="abertura_fechamento_imprimir">Imprimir</string>
+    <string name="caixa">Caixa</string>
+    <string name="recebimento_apagar">A Pagar</string>
+    <string name="pagamento">Pagamento</string>
+    <string name="conta">Contas Abertas</string>
+    <string name="conta_pagas">Contas Pagas</string>
+    <string name="list_cartoes">Cartão Pagamentos</string>
+    <string name="list_pixs">Pix Pagamentos</string>
+    <string name="qrcode_text">Toque no QRCode para ler o TICKET</string>
+    <string name="qrcode_ticket">QRcode Ticket</string>
+    <string name="conf_param_ope">Parâmetros Operacionais</string>
+    <string name="menu_param_ope">Parâmetros Operacionais</string>
+    <string name="label_titulo_valor">Título</string>
+
+    <string name="scheme_caixa_return">caixa_imp</string>
+    <string name="scheme_return_capture">deeplink_capture</string>
+    <string name="entrar">Entrar</string>
+    <string name="Largura_Impressao_Conta">Largura Impressão Conta:</string>
+    <string name="font_impressso_conta">Font Impressão Conta:</string>
+
+    <!-- Srtings CIELO -->
+    <string name="intent_scheme">deeplinksample</string>
+    <string name="intent_host">response</string>
+    <string name="cancel_order">Cancelar Ordem</string>
+
+    <string name="intent_scheme_same_activity">dlsameactivityscheme</string>
+
+
+</resources>

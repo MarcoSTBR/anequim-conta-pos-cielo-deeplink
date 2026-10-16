@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    style="@style/Theme.AnequimContaPOS.NoActionBar"
+    tools:context="br.com.st.anequimconta_stand_dl1.activity.ActivityEntrada">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/colorBranco"
+        android:src="@mipmap/ic_logo_st2"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/colorPreto"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:text="@string/entrada_text" />
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/colorPreto"
+        android:textStyle="normal"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:text="Anequim Conta\n1.?.?" />
+
+    <Button
+        android:id="@+id/btEntrar"
+        android:layout_marginTop="5sp"
+        android:layout_width="220sp"
+        android:layout_height="wrap_content"
+        android:text="@string/entrar"
+        android:textColor="@color/colorBranco"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:background="@drawable/botao_customizado"
+        android:textAllCaps="false" />
+</LinearLayout>

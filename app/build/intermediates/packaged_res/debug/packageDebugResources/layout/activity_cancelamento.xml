@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivityCancelamento">
+
+
+    <TextView
+        android:id="@+id/textAmount"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textAtk"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/tentarNovamente"
+        android:layout_marginTop="25dp"
+        android:layout_width="260sp"
+        android:layout_height="wrap_content"
+        android:text="Tentar Novamente"
+        android:textColor="@color/colorBranco"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:background="@drawable/botao_customizado"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/sair"
+        android:layout_marginTop="25dp"
+        android:layout_width="220sp"
+        android:layout_height="wrap_content"
+        android:text="Fechar"
+        android:textColor="@color/colorBranco"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:background="@drawable/botao_customizado"
+        android:textAllCaps="false" />
+</LinearLayout>

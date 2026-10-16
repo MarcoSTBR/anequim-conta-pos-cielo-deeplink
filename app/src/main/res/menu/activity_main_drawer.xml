@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_pedido_corrente"
+            android:icon="@drawable/ic_pedido"
+            android:title="@string/pedido_corrente" />
+
+        <item
+            android:id="@+id/nav_pedido_vendas"
+            android:icon="@drawable/ic_venda"
+            android:title="@string/pedido_venda" />
+
+        <item
+            android:id="@+id/nav_carrinho"
+            android:icon="@drawable/ic_carrinho"
+            android:title="@string/carrinho" />
+
+        <item
+            android:id="@+id/nav_cancelamento"
+            android:icon="@drawable/ic_cancelar"
+            android:title="@string/cancelamento" />
+
+        <item
+            android:id="@+id/nav_transferencia"
+            android:icon="@drawable/ic_tranferir"
+            android:title="@string/transferencia" />
+
+        <item
+            android:id="@+id/nav_caixa"
+            android:icon="@drawable/ic_caixa"
+            android:title="@string/Caixa" />
+        <item
+            android:id="@+id/nav_pagamento"
+            android:icon="@drawable/ic_pagamento"
+            android:title="@string/pagamento" />
+
+    </group>
+    <item android:title="Contas">
+        <menu>
+            <item
+                android:id="@+id/nav_conta"
+                android:icon="@drawable/ic_contas"
+                android:title="@string/conta" />
+            <item
+                android:id="@+id/nav_conta_pagas"
+                android:icon="@drawable/ic_contas_pagas"
+                android:title="@string/conta_pagas" />
+            <item
+                android:id="@+id/nav_list_cartoes"
+                android:icon="@drawable/ic_cartao"
+                android:title="@string/list_cartoes" />
+
+            <item
+                android:id="@+id/nav_list_pixs"
+                android:icon="@drawable/ic_pix"
+                android:title="@string/list_pixs" />
+
+            <item
+                android:id="@+id/nav_qrcode_ticket"
+                android:icon="@drawable/ic_qrcode"
+                android:title="@string/qrcode_ticket" />
+        </menu>
+    </item>
+
+
+</menu>

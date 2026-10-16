@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-2:/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\83d0f967348f7fc064a73053fc1815f4\\transformed\\appcompat-1.7.0\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
