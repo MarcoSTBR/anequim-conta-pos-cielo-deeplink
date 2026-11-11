@@ -1,26 +1,36 @@
 package br.com.st.anequimconta_stand_dl1.activity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
+import cielo.sdk.order.PrinterListener;
+import cielo.sdk.printer.PrinterManager;
 
-import br.com.st.anequimconta_stand_dl1.R;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import br.com.st.anequimconta_stand_dl1.databinding.ActivityImpressaoBinding;
 
 public class ActivityImpressao extends AppCompatActivity {
 
+    private final String TAG = "impressao_" ;
     private ActivityImpressaoBinding binding ;
     private String data ;
-    private boolean flag = false ;
+    private boolean hasPrinted = false;
+    private PrinterManager printerManager;
+    private Bitmap bitmapToPrint;
+
+    private Map<String, Integer> alignCenter = new HashMap<String, Integer>() {{
+        put("ALIGN", 1); // 0 = LEFT, 1 = CENTER, 2 = RIGHT
+    }};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,80 +38,82 @@ public class ActivityImpressao extends AppCompatActivity {
         binding = ActivityImpressaoBinding.inflate(getLayoutInflater()) ;
         setContentView(binding.getRoot());
         data = getIntent().getStringExtra("DATA");
-        binding.sair.setOnClickListener(v -> {
-            Intent intent = new Intent() ;
-            intent.putExtra("status", "erro") ;
-            intent.putExtra("mensagem", "Interrupção de Usuário!") ;
-            setResult(RESULT_CANCELED, intent);
-            finish();
-        });
-        binding.tentarNovamente.setOnClickListener(v -> {imprimir();});
+        binding.sair.setOnClickListener(v -> finishWithResult("erro", "Interrupção de Usuário!", RESULT_CANCELED));
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (!flag) {
-            flag = true ;
-            imprimir();
+        if (!hasPrinted) {
+            hasPrinted = true ;
+            imprimirComConfirmacao();
         }
     }
 
-    private void imprimir() {
-        Log.i("stone_", "imprimirBitMap Activity Impressao") ;
-        String showFeedback = "false" ;
-        String deeplinkReturnScheme = getString(R.string.scheme_caixa_return) ;
-        Uri uriBuilder = new Uri.Builder().scheme("printer-app")
-                .authority("print")
-                .appendQueryParameter("SHOW_FEEDBACK_SCREEN", showFeedback)
-                .appendQueryParameter("SCHEME_RETURN", deeplinkReturnScheme)
-                .appendQueryParameter("PRINTABLE_CONTENT", data)
-                .build();
-        Log.i("stone_",  Intent.ACTION_VIEW.toString());
-        Intent intent = new Intent(Intent.ACTION_VIEW) ;
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK) ;
-        intent.setData(uriBuilder) ;
-        startActivity(intent) ;
+    private void imprimirComConfirmacao() {
+        bitmapToPrint = transformarDataEmBitmap();
+        if (bitmapToPrint != null) {
+            // Registra o listener com retorno
+            ArrayList<Map<String, Integer>> styles = new ArrayList<>();
+            styles.add(alignCenter);
+            printerManager = new PrinterManager(this) ;
+            printerManager.printImage(bitmapToPrint, alignCenter, new PrinterListener() {
+                @Override
+                public void onPrintSuccess() {
+                    Log.i(TAG, "onPrintSuccess - CONFIRMADO");
+                    runOnUiThread(() -> {
+                        finishWithResult("success", "Impressão OK", RESULT_OK) ;
+                    });
+
+                }
+
+                @Override
+                public void onError(@Nullable Throwable throwable) {
+                    Log.e(TAG, "onPrintError: " + throwable.getMessage());
+                    String s = throwable.getMessage();
+                    runOnUiThread(() -> {
+                        finishWithResult("erro", "Impressão OK", RESULT_CANCELED) ;
+                    });
+                }
+
+                @Override
+                public void onWithoutPaper() {
+                    finishWithResult("erro", "Impressora sem papel!", RESULT_CANCELED) ;
+                }
+            });
+            Log.i(TAG, "printImage chamado, aguardando callback...");
+        } else  finishWithResult("erro", "Erro ao imprimir!", RESULT_CANCELED) ;
     }
 
+    private Bitmap transformarDataEmBitmap() {
+        try {
+            String cleanBase64 = data;
+            if (data.contains(",")) cleanBase64 = data.split(",")[1];
+            byte[] decoded = Base64.decode(cleanBase64, Base64.DEFAULT);
+            return BitmapFactory.decodeByteArray(decoded, 0, decoded.length);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+    private void finishWithResult(String status, String msg, int result){
+        if (bitmapToPrint != null && !bitmapToPrint.isRecycled()) {
+            bitmapToPrint.recycle();
+            bitmapToPrint = null;
+        }
+        Intent intent = new Intent();
+        intent.putExtra("status", status);
+        intent.putExtra("mensagem", msg);
+        setResult(result, intent);
+        finish();
+    }
 
     @Override
-    protected void onNewIntent(@NonNull Intent intent) {
-        super.onNewIntent(intent);
-        try {
-            Log.i("stone_", "onNewIntent") ;
-            Intent intt = new Intent() ;
-
-            if (intent != null && intent.getData() != null) {
-                Log.i("stone_", intent.getData().toString());
-                String caixa_imp = null;
-                caixa_imp = URLDecoder.decode(intent.getData().toString().replace("caixa_imp://print?", ""), "UTF-8");
-                if (caixa_imp.equals("DEEPLINK_RETURN=SUCCESS")) {
-                    intt.putExtra("status", "success");
-                    intt.putExtra("mensagem", "Impressão OK");
-                    setResult(RESULT_OK, intt);
-                    fechaActivity("Impressão OK") ;
-                } else {
-                    intt.putExtra("status", "erro");
-                    intt.putExtra("mensagem", caixa_imp);
-                    setResult(RESULT_CANCELED, intt);
-                    fechaActivity(caixa_imp) ;
-                }
-            }
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+    protected void onDestroy() {
+        super.onDestroy();
+        if (bitmapToPrint != null && !bitmapToPrint.isRecycled()) {
+            bitmapToPrint.recycle();
         }
-    }
-
-    private void fechaActivity(String msg){
-        new AlertDialog.Builder(this)
-                .setIcon(R.drawable.ic_notification)
-                .setTitle("Atenção")
-                .setMessage(msg)
-                .setCancelable(false)
-                .setPositiveButton("OK", (dialog, which) -> finish())
-                .show();
-
     }
 
 }

@@ -24,11 +24,16 @@ public class LeituraCracha extends BroadcastReceiver {
     }
 
     public void desconectar(){
-        // Desregistra para evitar vazamento de memória (Memory Leak)
-        ctx.unregisterReceiver(this);
+        try {
+            // Desregistra para evitar vazamento de memória (Memory Leak)
+            ctx.unregisterReceiver(this);
 
-        // Boa prática recomendada pela Cielo: Cancelar o modo de detecção ao sair
-        desativarLeituraCieloMifare();
+            // Boa prática recomendada pela Cielo: Cancelar o modo de detecção ao sair
+            desativarLeituraCieloMifare();
+        } catch (RuntimeException e){
+            e.printStackTrace();
+            Log.i(TAG, "RuntimeException "+e.getMessage()) ;
+        }
     }
 
     public void start(){

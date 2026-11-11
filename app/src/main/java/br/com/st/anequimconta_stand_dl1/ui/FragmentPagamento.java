@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,6 +24,7 @@ import android.widget.Toast;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
 import br.com.st.anequimconta_stand_dl1.R;
+import br.com.st.anequimconta_stand_dl1.activity.ActivityAddPedido;
 import br.com.st.anequimconta_stand_dl1.activity.ActivityPainelContas;
 import br.com.st.anequimconta_stand_dl1.adapter.AdapterContaPagamentos;
 import br.com.st.anequimconta_stand_dl1.adapter.AdapterModalidade;
@@ -47,10 +47,6 @@ import br.com.st.anequimconta_stand_dl1.entidade.Modalidade;
 import br.com.st.anequimconta_stand_dl1.impressao.controle.ControleImpContaPagNFCeView;
 import br.com.st.anequimconta_stand_dl1.impressao.controle.ControleImpContaPagView;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.OnControleImpContaPagView;
-import br.com.st.anequimconta_stand_dl1.pospag.ControlePosConected;
-import br.com.st.anequimconta_stand_dl1.pospag.OnPosPagConnect;
-import br.com.st.anequimconta_stand_dl1.pospag.PosPagType;
-import br.com.st.anequimconta_stand_dl1.tipos.TipoModalidade;
 import br.com.st.anequimconta_stand_dl1.util.ConfiguracoesOperacionais;
 import br.com.st.anequimconta_stand_dl1.util.UtilSet;
 
@@ -63,6 +59,7 @@ import java.util.List;
 
 public class FragmentPagamento extends Fragment implements OnControlePagamento, OnControleModalidade, OnControleFechamentoContas, OnControleImpContaPagView {
 
+    private final String TAG = "pagamento" ;
     private FragmentPagamentoBinding binding ;
     private ControleContaPagamento controleContaPagamento ;
     private Double valorPagamento = 0.0 ;
@@ -174,7 +171,7 @@ public class FragmentPagamento extends Fragment implements OnControlePagamento, 
 
     @Override
     public void controleModalidadeOk(List<Modalidade> l) {
-        progressDialog.dismiss();
+        if (progressDialog.isShowing()) progressDialog.dismiss();
      //   GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 3) ;
         LinearLayoutManager layoutManager = new LinearLayoutManager(this.getActivity()) ;
         binding.gradeModalidade.setLayoutManager(layoutManager);
@@ -189,7 +186,7 @@ public class FragmentPagamento extends Fragment implements OnControlePagamento, 
 
     @Override
     public void contasList(List<Conta> l) {
-        progressDialog.dismiss();
+        if (progressDialog.isShowing()) progressDialog.dismiss();
         binding.btAddPedido.setEnabled(true);
         contaList = l ;
         String s = "";
@@ -237,7 +234,7 @@ public class FragmentPagamento extends Fragment implements OnControlePagamento, 
 
     @Override
     public void pagamentoErro(String msg) {
-        progressDialog.dismiss();
+        if (progressDialog.isShowing()) progressDialog.dismiss();
         new AlertDialog.Builder(getActivity())
                 .setIcon(R.drawable.ic_notification)
                 .setTitle("Erro:")
@@ -249,17 +246,39 @@ public class FragmentPagamento extends Fragment implements OnControlePagamento, 
 
     private void addPedido() {
         Log.i("FP_", "addPedido") ;
-        addpedido.launch(new Intent(getActivity(), ActivityPainelContas.class) );
+        //addpedido.launch(new Intent(getActivity(), ActivityPainelContas.class) );
+        addpedido.launch(new Intent(getActivity(), ActivityAddPedido.class) );
+
     }
 
     ActivityResultLauncher addpedido = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result-> {
         if (result.getResultCode() == Activity.RESULT_OK) {
             if (result.getData() != null) {
-                String uuid = result.getData().getStringExtra("CONTA_UUID");
-                addconta(uuid) ;
+                recebeConta(result.getData().getStringExtra("NUMERO")) ;
+                //String uuid = result.getData().getStringExtra("CONTA_UUID");
+                //addconta(uuid) ;
             } else Toast.makeText(getActivity(), "Nenhuma Conta Selecionada!", Toast.LENGTH_SHORT).show();
         } else Toast.makeText(getActivity(), "Nenhuma Conta Selecionada!", Toast.LENGTH_SHORT).show();
     });
+
+    private void recebeConta(String numero){
+        progressDialog.show();
+        try {
+            if (contaList.size() > 0)
+                throw new Exception("Conta já foi selecionada!") ;
+            for (Conta c : contaList) {
+                if (numero == c.getNUMERO())
+                    throw new Exception("Está conta já foi selecionada!") ;
+            }
+            controleContaPagamento.addNumero(numero);
+         //   controleContaPagamento.addContas(c.uuid);
+        } catch (Exception e){
+            e.printStackTrace();
+            alert(e.getMessage());
+        }
+      //  controleContaPagamento.addNumero(numero);
+    }
+
 
     private void addconta(String uuid){
         progressDialog.show();
@@ -295,9 +314,8 @@ public class FragmentPagamento extends Fragment implements OnControlePagamento, 
     }
 
     private void alertSair(String msg) {
-       progressDialog.dismiss();
-
-       new AlertDialog.Builder(getActivity())
+      if (progressDialog.isShowing()) progressDialog.dismiss();
+      new AlertDialog.Builder(getActivity())
                 .setIcon(R.drawable.ic_notification)
                 .setTitle("Atenção")
                 .setMessage(msg)
@@ -313,8 +331,7 @@ public class FragmentPagamento extends Fragment implements OnControlePagamento, 
     }
 
     private void alert(String msg){
-        if (progressDialog.isShowing())
-            progressDialog.dismiss();
+        if (progressDialog.isShowing()) progressDialog.dismiss();
         new AlertDialog.Builder(getActivity())
                 .setIcon(R.drawable.ic_notification)
                 .setTitle("Atenção:")
@@ -331,8 +348,7 @@ public class FragmentPagamento extends Fragment implements OnControlePagamento, 
 
     @Override
     public void controleFechamentoContasOk(ContaMult contaMult) {
-        if (progressDialog.isShowing())
-            progressDialog.dismiss();
+        if (progressDialog.isShowing()) progressDialog.dismiss();
         List<String> lm = new ArrayList<>() ;
         lm.add(contaMult.getUUID()) ;
         try {
@@ -387,28 +403,26 @@ public class FragmentPagamento extends Fragment implements OnControlePagamento, 
     }
 
     private void contaNormal(ContaViewPagView contaViewPagView){
-        progressDialog.show();
+        if (progressDialog.isShowing()) progressDialog.dismiss();
         controleImpContaPagView.imprimir(contaViewPagView);
     }
 
 
     private void contaNFCe(ContaViewPagView contaViewPagView){
-        progressDialog.show();
+        if (progressDialog.isShowing()) progressDialog.dismiss();
         controleImpContaPagNFCeView.imprimir(contaViewPagView);
     }
 
     @Override
     public void controleImpContaPagViewOk() {
-        if (progressDialog.isShowing())
-            progressDialog.dismiss();
+        if (progressDialog.isShowing()) progressDialog.dismiss();
         alertSair("Impressão OK!");
       //  requireActivity().onBackPressed();
     }
 
     @Override
     public void controleImpContaPagViewErro(String msg) {
-        if (progressDialog.isShowing())
-            progressDialog.dismiss();
+        if (progressDialog.isShowing()) progressDialog.dismiss();
         alertSair(msg);
     }
 }

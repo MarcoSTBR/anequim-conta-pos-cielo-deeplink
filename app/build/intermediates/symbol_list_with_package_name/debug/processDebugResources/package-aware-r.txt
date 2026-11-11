@@ -1382,7 +1382,11 @@ attr zxing_viewfinder_laser_visibility
 attr zxing_viewfinder_mask
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
+bool enable_system_alarm_service_default
+bool enable_system_foreground_service_default
+bool enable_system_job_service_default
 bool mtrl_btn_textappearance_all_caps
+bool workmanager_test_configuration
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -3328,6 +3332,7 @@ id aligned
 id all
 id allStates
 id always
+id ambiente_desc
 id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
@@ -3526,6 +3531,7 @@ id ghost_view_holder
 id gone
 id grade_acompanhamento
 id grade_acompanhamento_item
+id grade_ambiente
 id grade_conf_mais_vendidos
 id grade_conf_mod_pos
 id grade_contas
@@ -3533,6 +3539,7 @@ id grade_contas_bitmap
 id grade_contas_pagas
 id grade_item_venda
 id grade_modalidade
+id grade_obs
 id grade_operacionais
 id grade_pagamentos
 id grade_pedidos
@@ -3541,6 +3548,7 @@ id grade_pospagamentos_pix
 id grade_produtos
 id graph
 id graph_wrap
+id gravar
 id group_divider
 id grouping
 id groups
@@ -3611,6 +3619,7 @@ id left
 id leftToRight
 id legacy
 id lerCodigoBarras
+id limpar
 id line1
 id line3
 id linear
@@ -3657,6 +3666,8 @@ id menos_linhas
 id menos_um
 id mensagem
 id message
+id metricsDelegator
+id metricsStateHolder
 id middle
 id mini
 id mobile_navigation
@@ -3738,6 +3749,8 @@ id numero
 id numero_pedido
 id numero_terminal
 id numero_trans
+id obs
+id observacao
 id off
 id ok_dest
 id on
@@ -3783,6 +3796,7 @@ id postLayout
 id preco
 id precoTotal
 id pressed
+id produto
 id produto_add
 id progress_circular
 id progress_horizontal
@@ -4112,6 +4126,7 @@ layout activity_entrada
 layout activity_envio_pedidos
 layout activity_impressao
 layout activity_imprimir_contas
+layout activity_item_obs
 layout activity_login
 layout activity_painel_contas
 layout activity_principal
@@ -4160,11 +4175,13 @@ layout layout_conf_mod_pos
 layout layout_conta_bitmap
 layout layout_grade_acompanhamemto
 layout layout_grade_acompanhamemto_item
+layout layout_grade_ambiente
 layout layout_grade_cancelamento
 layout layout_grade_carrinho
 layout layout_grade_cartao_credito
 layout layout_grade_contas_pagas
 layout layout_grade_modalidade
+layout layout_grade_obs
 layout layout_grade_operacional
 layout layout_grade_painel_conta
 layout layout_grade_pedido_corrente
@@ -4297,6 +4314,8 @@ string abertura_fechamento_imprimir
 string abertura_fechamento_voltar
 string action_settings
 string androidx_startup
+string anequim_stand
+string anequim_stand_imp
 string app_name
 string app_version
 string appbar_scrolling_view_behavior

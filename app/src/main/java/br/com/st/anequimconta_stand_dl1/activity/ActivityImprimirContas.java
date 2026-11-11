@@ -19,11 +19,10 @@ import br.com.st.anequimconta_stand_dl1.databinding.ActivityImprimirContasBindin
 import br.com.st.anequimconta_stand_dl1.entidade.Conta;
 import br.com.st.anequimconta_stand_dl1.entidade.ContaView;
 import br.com.st.anequimconta_stand_dl1.impressao.ContaViewBitMap;
-import br.com.st.anequimconta_stand_dl1.impressao.ImpressaoBitmapBuilder;
+import br.com.st.anequimconta_stand_dl1.impressao.cielo.ImpressaoBitmap;
 import br.com.st.anequimconta_stand_dl1.impressao.controle.ControleTotaisContaView;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.ListenerImpressaoBipMap;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.OnImpressaoBitMap;
-import br.com.st.anequimconta_stand_dl1.impressao.util.ImpressaoUtil;
 import br.com.st.anequimconta_stand_dl1.impressao.util.UtilContaParam;
 import br.com.st.anequimconta_stand_dl1.util.UtilSet;
 
@@ -63,8 +62,7 @@ public class ActivityImprimirContas extends AppCompatActivity implements OnContr
                 num_pessoa++ ;
                 binding.imprimirNumPessoas.setText(String.valueOf(num_pessoa));
         });
-        onImpressaoBitMap = new ImpressaoBitmapBuilder(this, this)
-                .getImpressao(this) ;
+        onImpressaoBitMap = new ImpressaoBitmap(this, this) ;
     }
 
     private void contanormal() {

@@ -9,7 +9,6 @@ public class AcompanhamentoProduto implements Entidade{
     private int produto_id ;
     private int acomp_id ;
 
-
     public AcompanhamentoProduto(JSONObject j) throws JSONException {
        id = j.getInt("id") ;
        produto_id = j.getInt("AFOOD_PRODUTO_ID") ;

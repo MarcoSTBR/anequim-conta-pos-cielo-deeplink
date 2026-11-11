@@ -33,6 +33,9 @@ public final class LayoutGradeCarrinhoBinding implements ViewBinding {
   public final ImageButton menos;
 
   @NonNull
+  public final TextView observacao;
+
+  @NonNull
   public final TextView produtoAdd;
 
   @NonNull
@@ -40,12 +43,14 @@ public final class LayoutGradeCarrinhoBinding implements ViewBinding {
 
   private LayoutGradeCarrinhoBinding(@NonNull LinearLayout rootView, @NonNull TextView descricao,
       @NonNull LinearLayout layoutDescricao, @NonNull ImageButton mais, @NonNull ImageButton menos,
-      @NonNull TextView produtoAdd, @NonNull TextView quantidadePreco) {
+      @NonNull TextView observacao, @NonNull TextView produtoAdd,
+      @NonNull TextView quantidadePreco) {
     this.rootView = rootView;
     this.descricao = descricao;
     this.layoutDescricao = layoutDescricao;
     this.mais = mais;
     this.menos = menos;
+    this.observacao = observacao;
     this.produtoAdd = produtoAdd;
     this.quantidadePreco = quantidadePreco;
   }
@@ -101,6 +106,12 @@ public final class LayoutGradeCarrinhoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.observacao;
+      TextView observacao = ViewBindings.findChildViewById(rootView, id);
+      if (observacao == null) {
+        break missingId;
+      }
+
       id = R.id.produto_add;
       TextView produtoAdd = ViewBindings.findChildViewById(rootView, id);
       if (produtoAdd == null) {
@@ -114,7 +125,7 @@ public final class LayoutGradeCarrinhoBinding implements ViewBinding {
       }
 
       return new LayoutGradeCarrinhoBinding((LinearLayout) rootView, descricao, layoutDescricao,
-          mais, menos, produtoAdd, quantidadePreco);
+          mais, menos, observacao, produtoAdd, quantidadePreco);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

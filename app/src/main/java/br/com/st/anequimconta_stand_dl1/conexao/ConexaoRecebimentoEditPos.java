@@ -21,10 +21,17 @@ public abstract class ConexaoRecebimentoEditPos extends ConexaoServer{
         this.recebimentoPos = recebimentoPos ;
         msg = "Atualizando Modalidade...";
         maps.put("class","AfoodRecebimentoPos") ;
-        maps.put("method","store2") ; //methodo resinscrito loaadAll
-        maps.put("data",recebimentoPos.geJSON()) ;
+        maps.put("method","store2") ;
+        maps.put("data",getJSON()) ;
         url =  new URL(UtilSet.getServidorMaster(ctx)) ; //Dao.getLinkAcessoADO(ctx).getLinkAcesso(Link.fConsultaProduto).getUrl() ;
     }
+
+    private JSONObject getJSON() throws JSONException {
+        //  recebimentoPos.setRecibo(UtilSet.transfStringBase64(recebimentoPos.getRecibo()));
+        return  recebimentoPos.geJSON();
+
+    }
+
 
     @Override
     protected void onPostExecute(String s) {
@@ -33,7 +40,7 @@ public abstract class ConexaoRecebimentoEditPos extends ConexaoServer{
         try {
             JSONObject j = new JSONObject(s) ;
             if (j.getString("status").equals("success")) {
-                  recebimentoEditPosOk(new RecebimentoPos(j.getJSONObject("data"))) ;
+                recebimentoEditPosOk(new RecebimentoPos(j.getJSONObject("data"))) ;
             } else {
                 recebimentoEditPosErro(j.getString("data"));
             }

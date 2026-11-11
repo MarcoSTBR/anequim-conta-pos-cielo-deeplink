@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_cartao_credito.xml"
     },
     {
+        "merged": "br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:/layout/layout_grade_carrinho.xml",
+        "source": "br.com.st.anequimconta_stand_dl1.app-main-6:/layout/layout_grade_carrinho.xml"
+    },
+    {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:\\layout\\layout_grade_modalidade.xml",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_modalidade.xml"
     },
@@ -62,6 +66,10 @@
     {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:\\layout\\layout_cliente_destinatario.xml",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_cliente_destinatario.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:\\layout\\layout_grade_ambiente.xml",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_ambiente.xml"
     },
     {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:\\layout\\activity_reimprimir.xml",
@@ -156,8 +164,8 @@
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\alert_usuario_acesso.xml"
     },
     {
-        "merged": "br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:/layout/activity_add_pedido.xml",
-        "source": "br.com.st.anequimconta_stand_dl1.app-main-6:/layout/activity_add_pedido.xml"
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:\\layout\\layout_grade_obs.xml",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_obs.xml"
     },
     {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:\\layout\\layout_grade_pos_pagamento.xml",
@@ -186,6 +194,10 @@
     {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:\\layout\\fragment_list_pix.xml",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\fragment_list_pix.xml"
+    },
+    {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:\\layout\\activity_item_obs.xml",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_item_obs.xml"
     },
     {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-3:\\layout\\activity_produto_add.xml",

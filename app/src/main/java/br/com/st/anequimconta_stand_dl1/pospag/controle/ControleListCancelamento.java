@@ -9,9 +9,10 @@ import br.com.st.anequimconta_stand_dl1.daoclass.DaoFilter;
 import br.com.st.anequimconta_stand_dl1.daoclass.DaoFilters;
 import br.com.st.anequimconta_stand_dl1.entidade.ContaPag;
 import br.com.st.anequimconta_stand_dl1.entidade.RecebimentoPos;
-import br.com.st.anequimconta_stand_dl1.pospag.ControlePosPagamento;
 import br.com.st.anequimconta_stand_dl1.pospag.OnPosCancelamento;
+import br.com.st.anequimconta_stand_dl1.pospag.PosPagamento;
 import br.com.st.anequimconta_stand_dl1.pospag.PosPagamentoView;
+import br.com.st.anequimconta_stand_dl1.pospag.payCielo.PosPagamentoPayCielo;
 import br.com.st.anequimconta_stand_dl1.ui.FragmentListCartao;
 
 import org.json.JSONException;
@@ -23,11 +24,11 @@ public abstract class ControleListCancelamento {
 
     private Activity ctx ;
     private PosPagamentoView pag ;
-    private ControlePosPagamento controlePosPagamento;
+    private PosPagamento posPagamentoPay;
 
     public ControleListCancelamento(FragmentListCartao f) {
         this.ctx = f.getActivity();
-        controlePosPagamento = new ControlePosPagamento(f) ;
+        posPagamentoPay = new PosPagamentoPayCielo(f) ;
     }
 
     public void executar(PosPagamentoView pag){
@@ -84,7 +85,7 @@ public abstract class ControleListCancelamento {
     }
 
     private void controleCancelar(ContaPag contaPag) {
-        controlePosPagamento.cancelamento(contaPag , new OnPosCancelamento() {
+        posPagamentoPay.cancelamento(contaPag , new OnPosCancelamento() {
 
             @Override
             public void onCancelamentoSucess(ContaPag contaPag) {

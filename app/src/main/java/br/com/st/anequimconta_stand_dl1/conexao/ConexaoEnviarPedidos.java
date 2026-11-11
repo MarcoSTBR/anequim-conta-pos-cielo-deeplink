@@ -3,6 +3,7 @@ package br.com.st.anequimconta_stand_dl1.conexao;
 import android.app.Activity;
 import android.util.Log;
 
+import br.com.st.anequimconta_stand_dl1.util.ConfiguracoesOperacionais;
 import br.com.st.anequimconta_stand_dl1.util.UtilSet;
 
 import org.json.JSONArray;
@@ -17,8 +18,13 @@ public abstract class ConexaoEnviarPedidos extends ConexaoServer{
     public ConexaoEnviarPedidos(Activity ctx, JSONArray jaa) throws MalformedURLException {
         super(ctx);
         method = "POST" ;
-        msg = "Enviando Pedidos..." ;
-        maps.put("class", "AfoodRequisicaoPos") ;
+        if (ConfiguracoesOperacionais.getConfOperacional(ctx, ConfiguracoesOperacionais.operacao.env_clc)) {
+            msg = "Enviando Pedido, Calculando..." ;
+            maps.put("class", "AfoodRequisicaoCalcPos");
+        } else {
+            msg = "Enviando Pedido..." ;
+            maps.put("class", "AfoodRequisicaoPos");
+        }
         maps.put("method", "requisicao") ;
         maps.put("requisicao", jaa) ;
         url = new URL(UtilSet.getServidorMaster(ctx)) ;

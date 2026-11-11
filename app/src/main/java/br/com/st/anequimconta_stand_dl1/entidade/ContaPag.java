@@ -51,7 +51,7 @@ public class ContaPag implements Entidade{
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         JSONObject j = new JSONObject() ;
         if (id > 0)
-            j.put("id", 0) ;
+            j.put("id", id) ;
         j.put("UUID", UUID) ;
         j.put("MULT_UUID", MULT_UUID) ;
         j.put("DATA", df.format(DATA)) ;

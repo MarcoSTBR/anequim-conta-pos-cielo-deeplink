@@ -95,7 +95,6 @@ public class FragmentPedidoCorrente extends Fragment implements ListenerAdapterP
     ActivityResultLauncher addEnv = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result-> {
         if (result.getResultCode() == Activity.RESULT_OK) {
             enviou() ;
-
         }
     });
 

@@ -4,7 +4,7 @@ import android.app.Activity;
 
 import br.com.st.anequimconta_stand_dl1.entidade.ContaViewPagView;
 import br.com.st.anequimconta_stand_dl1.impressao.ContaViewPagBitMap;
-import br.com.st.anequimconta_stand_dl1.impressao.ImpressaoBitmapBuilder;
+import br.com.st.anequimconta_stand_dl1.impressao.cielo.ImpressaoBitmap;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.ListenerImpressaoBipMap;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.OnControleImpContaPagView;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.OnImpressaoBitMap;
@@ -20,7 +20,7 @@ public class ControleImpContaPagView {
     public ControleImpContaPagView(FragmentPagamento act, OnControleImpContaPagView onControleImpContaPagView) {
         this.ctx = act.getActivity();
         this.onControleImpContaPagView = onControleImpContaPagView;
-        onImpressaoBitMap = new ImpressaoBitmapBuilder(ctx, new ListenerImpressaoBipMap() {
+        onImpressaoBitMap = new ImpressaoBitmap(act, new ListenerImpressaoBipMap() {
             @Override
             public void imprimirBitMapOk() {
                 onControleImpContaPagView.controleImpContaPagViewOk();
@@ -30,13 +30,13 @@ public class ControleImpContaPagView {
             public void imprimirBitMapErro(String msg) {
                 onControleImpContaPagView.controleImpContaPagViewErro(msg);
             }
-        }).getImpressao(act) ;
+        }) ;
     }
 
     public ControleImpContaPagView(FragmentContasPagas act, OnControleImpContaPagView onControleImpContaPagView) {
         this.ctx = act.getActivity();
         this.onControleImpContaPagView = onControleImpContaPagView;
-        onImpressaoBitMap = new ImpressaoBitmapBuilder(ctx, new ListenerImpressaoBipMap() {
+        onImpressaoBitMap = new ImpressaoBitmap(act, new ListenerImpressaoBipMap() {
             @Override
             public void imprimirBitMapOk() {
                 onControleImpContaPagView.controleImpContaPagViewOk();
@@ -46,7 +46,7 @@ public class ControleImpContaPagView {
             public void imprimirBitMapErro(String msg) {
                 onControleImpContaPagView.controleImpContaPagViewErro(msg);
             }
-        }).getImpressao(act) ;
+        }) ;
     }
 
 

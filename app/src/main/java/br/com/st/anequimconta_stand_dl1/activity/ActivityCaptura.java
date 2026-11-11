@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +19,6 @@ import org.json.JSONObject;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
 import br.com.st.anequimconta_stand_dl1.R;
 import br.com.st.anequimconta_stand_dl1.dao.ModalidadeDao;
@@ -28,14 +26,11 @@ import br.com.st.anequimconta_stand_dl1.databinding.ActivityCapturaBinding;
 import br.com.st.anequimconta_stand_dl1.entidade.ContaPag;
 import br.com.st.anequimconta_stand_dl1.entidade.Modalidade;
 import br.com.st.anequimconta_stand_dl1.pospag.payCielo.utils.UtilisJava;
-import br.com.st.anequimconta_stand_dl1.pospag.paystone.OnSelectOpcaoStone;
-import br.com.st.anequimconta_stand_dl1.pospag.paystone.OpcaoPagamentoStone;
-import br.com.st.anequimconta_stand_dl1.util.UtilSet;
 import br.com.st.anequimconta_stand_dl1.BuildConfig;
 
 
 
-public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoStone {
+public class ActivityCaptura extends AppCompatActivity {
     
     private final String TAG1 = "captura_" ;
     private final String TAG2 = "cielo_" ;
@@ -44,8 +39,6 @@ public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoS
     private Modalidade modalidade ;
     private String data ;
     private boolean flag ;
-    private List<OpcaoPagamentoStone> list ;
-    private OpcaoPagamentoStone opCorrente ;
     private int numeroId ;
 
 
@@ -71,7 +64,6 @@ public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoS
         binding.tentarNovamente.setOnClickListener(v -> executar());
         binding.sair.setOnClickListener(v -> sair());
         flag = false ;
-        list = new ArrayList<OpcaoPagamentoStone>() ;
 
         scheme  =  getString(R.string.intent_scheme) ;
         responseHost = getString(R.string.intent_host) ;
@@ -91,7 +83,6 @@ public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoS
         }
     }
 
-
     private void setRecebimento() {
         try {
             contaPag = new ContaPag(new JSONObject(data));
@@ -103,8 +94,10 @@ public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoS
             Log.i(TAG2, modalidade.getTipoModalidade().valor) ;
             executar() ;
         } catch (JSONException e) {
+            e.printStackTrace();
             binding.textDisplay.setText(e.getMessage());
             saiOK(e.getMessage()) ;
+
         }
     }
 
@@ -112,21 +105,20 @@ public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoS
         return "uriapp #" + (System.currentTimeMillis() / 1000);
     }
 
+    private void executar()  {
+        try {
+       // Long sku =  ThreadLocalRandom.current().nextLong(500L, 1000L);
+        numeroId = (int) (System.currentTimeMillis() % 100000);
+        String sku = String.valueOf(numeroId);
 
-/*
-    private void getOrderID() {
-        numeroId = UtilSet.getProximoNumero(this) ;
-    }
-*/
-
-    private void executar(){
-        Long sku =  ThreadLocalRandom.current().nextLong(500L, 1000L);
-        numeroId = sku.intValue() ;
         String name = contaPag.getUUID().substring(1,5) ;
-        Long amount = Long.parseLong(String.valueOf(Integer.valueOf(new DecimalFormat("#0.00").format(contaPag.getVALOR())
+        Long amount =  Math.round(contaPag.getVALOR() * 100);
+/*
+        Long.parseLong(String.valueOf(Integer.valueOf(new DecimalFormat("#0.00").format(contaPag.getVALOR())
                 .replace(".","")
                 .replace(",",""))));
-        Item item = new Item(sku.toString(), name, amount, 1, "unidade") ;
+*/
+        Item item = new Item(sku, name, amount, 1, "unidade") ;
         List<Item> itens = new ArrayList();
         itens.add(item) ;
         String clientId = BuildConfig.CREDENTIALS_CLIENT_ID;
@@ -134,7 +126,7 @@ public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoS
         OrderRequest ord = new OrderRequest(clientId,
                 accessToken,
                 amount,
-                "DEBITO_AVISTA",
+                getPayment(),
                 1,
                 "",
                 null,
@@ -153,13 +145,73 @@ public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoS
         Log.i(TAG2, "scheme_same_activity "+scheme_same_activity) ;
         Log.i(TAG2, "callbackUrlSameActivity "+callbackUrlSameActivity) ;
         UtilisJava.startForegroundServiceAndLaunchDeepLink(this, checkoutUri) ;
+        } catch (Exception e) {
+            e.printStackTrace();
+            saiOK(e.getMessage());
+        }
     }
 
-    private String getPayment(){
+    private String getPayment() throws Exception {
         String ret = "" ;
 
+        switch (modalidade.getTipoModalidade()){
+            case pgDebito : ret = "DEBITO_AVISTA" ;
+               break;
+            case pgCredito: ret = "CREDITO_AVISTA" ;
+                break;
+            case pgCartao : ret = "" ;
+                break;
+            case pgCartaoLio : ret = "CREDITO_AVISTA" ;
+                break;
+            case pgPIX : ret = "PIX" ;
+                break;
+            case pgRefeicao: ret = "VOUCHER_REFEICAO" ;
+                break;
+            default:  ret = ""  ;
+        }
         return ret ;
     }
+        /*
+        DEBITO_AVISTA
+        DEBITO_PAGTO_FATURA_DEBITO
+        CREDITO_AVISTA
+        CREDITO_PARCELADO_LOJA
+        CREDITO_PARCELADO_ADM
+        CREDITO_PARCELADO_BNCO
+        PRE_AUTORIZACAO
+        CREDITO_PARCELADO_CLIENTE
+        CREDITO_CREDIARIO_CREDITO
+        VOUCHER_ALIMENTACAO
+        VOUCHER_REFEICAO
+        VOUCHER_AUTOMOTIVO
+        VOUCHER_CULTURA
+        VOUCHER_PEDAGIO
+        VOUCHER_BENEFICIOS
+        VOUCHER_AUTO
+        VOUCHER_CONSULTA_SALDO
+        VOUCHER_VALE_PEDAGIO
+        CREDIARIO_VENDA
+        CREDIARIO_SIMULACAO
+        CARTAO_LOJA_AVISTA
+        CARTAO_LOJA_PARCELADO_LOJA
+        CARTAO_LOJA_PARCELADO
+        CARTAO_LOJA_PARCELADO_BANCO
+        CARTAO_LOJA_PAGTO_FATURA_CHEQUE
+        CARTAO_LOJA_PAGTO_FATURA_DINHEIRO
+        FROTAS
+        PIX
+
+                pgTroco("pgTroco"),
+                pgDinheiro("pgDinheiro"),
+                pgCartao("pgCartao"),
+                pgDebito("pgDebito"),
+                pgCredito("pgCredito"),
+                pgCartaoLio("pgCartaoLio"),
+                pgDesconto("pgDesconto"),
+                pgGorjeta("pgGorjeta"),
+                pgPIX("pgPIX"),
+                pgQRCode("pgQRCode");
+*/
 
     @Override
     protected void onNewIntent(@NonNull Intent intent) {
@@ -179,7 +231,6 @@ public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoS
                           sairEx(j.getString("reason")) ;
                        else sairEx(j.toString()) ;
                   }
-//                  Toast.makeText(this, "Intent recebida: " + json, Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                     sairEx(e.getMessage()) ;
@@ -233,9 +284,4 @@ public class ActivityCaptura extends AppCompatActivity implements OnSelectOpcaoS
     }
 
 
-    @Override
-    public void selectionado(OpcaoPagamentoStone op) {
-        opCorrente =  op ;
-        executar();
-    }
 }

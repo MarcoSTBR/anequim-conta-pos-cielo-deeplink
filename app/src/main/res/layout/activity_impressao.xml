@@ -28,17 +28,6 @@
             />
 
         <Button
-            android:id="@+id/tentarNovamente"
-            android:layout_marginTop="25dp"
-            android:layout_width="260sp"
-            android:layout_height="wrap_content"
-            android:text="Imprimir"
-            android:textColor="@color/colorBranco"
-            android:layout_gravity="center"
-            android:textSize="25dp"
-            android:background="@drawable/botao_customizado"
-            android:textAllCaps="false" />
-        <Button
             android:id="@+id/sair"
             android:layout_marginTop="25dp"
             android:layout_width="220sp"

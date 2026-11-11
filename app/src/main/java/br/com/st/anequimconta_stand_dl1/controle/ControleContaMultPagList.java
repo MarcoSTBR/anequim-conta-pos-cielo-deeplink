@@ -18,8 +18,6 @@ import br.com.st.anequimconta_stand_dl1.entidade.Caixa;
 import br.com.st.anequimconta_stand_dl1.entidade.ContaMult;
 import br.com.st.anequimconta_stand_dl1.entidade.ContaPag;
 import br.com.st.anequimconta_stand_dl1.entidade.Modalidade;
-import br.com.st.anequimconta_stand_dl1.pospag.OnListPixPagamentos;
-import br.com.st.anequimconta_stand_dl1.pospag.paystone.PosPagamentoPixPayStone;
 
 public class ControleContaMultPagList {
 

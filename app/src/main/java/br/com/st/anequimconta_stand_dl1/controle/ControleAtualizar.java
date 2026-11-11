@@ -6,10 +6,13 @@ import android.app.ProgressDialog;
 import br.com.st.anequimconta_stand_dl1.conexao.ConexaoAcompanhamento;
 import br.com.st.anequimconta_stand_dl1.conexao.ConexaoAcompanhamentoItem;
 import br.com.st.anequimconta_stand_dl1.conexao.ConexaoAcompanhamentoProduto;
+import br.com.st.anequimconta_stand_dl1.conexao.ConexaoAmbiente;
 import br.com.st.anequimconta_stand_dl1.conexao.ConexaoGradeVendas;
 import br.com.st.anequimconta_stand_dl1.conexao.ConexaoModalidade;
 import br.com.st.anequimconta_stand_dl1.conexao.ConexaoProdutos;
 import br.com.st.anequimconta_stand_dl1.conexao.ConexaoProdutoTicke;
+import br.com.st.anequimconta_stand_dl1.daoclass.DaoFilter;
+import br.com.st.anequimconta_stand_dl1.daoclass.DaoFilters;
 import br.com.st.anequimconta_stand_dl1.entidade.ProdutoTicket;
 
 import java.net.MalformedURLException;
@@ -47,7 +50,8 @@ public abstract class ControleAtualizar {
     private void setAcompanhamento () {
         try {
             progressDialog.setTitle("Acompanhamentos....");
-            new ConexaoAcompanhamento(ctx) {
+
+            new ConexaoAcompanhamento(ctx, filtersStatus1(), "") {
                 @Override
                 public void ok() {
                     setAcompanhamentoItem();
@@ -67,7 +71,7 @@ public abstract class ControleAtualizar {
     private void setAcompanhamentoItem () {
         try {
             progressDialog.setTitle("Acompanhamentos Itens....");
-            new ConexaoAcompanhamentoItem(ctx) {
+            new ConexaoAcompanhamentoItem(ctx, filtersStatus1(), "") {
                 @Override
                 public void ok() {
                     setAcompanhamentoProd();
@@ -87,7 +91,7 @@ public abstract class ControleAtualizar {
     private void setAcompanhamentoProd () {
         try {
             progressDialog.setTitle("Acompanhamentos Produtos....");
-            new ConexaoAcompanhamentoProduto(ctx) {
+            new ConexaoAcompanhamentoProduto(ctx, filtersStatus1(), "") {
                 @Override
                 public void ok() {
                     setGradeVendas();
@@ -104,6 +108,11 @@ public abstract class ControleAtualizar {
         }
     }
 
+    private DaoFilters filtersStatus1(){
+        DaoFilters f = new DaoFilters();
+        f.add(new DaoFilter("STATUS", "=", "1"));
+        return f ;
+    }
 
     private void setGradeVendas () {
         try {
@@ -133,7 +142,7 @@ public abstract class ControleAtualizar {
             @Override
             public void ok() {
 
-                setTickets() ;
+                setAmbiente() ;
             }
 
             @Override
@@ -143,6 +152,25 @@ public abstract class ControleAtualizar {
         }.execute() ;
     }
 
+    private void setAmbiente(){
+        try {
+            new ConexaoAmbiente(ctx) {
+                @Override
+                public void ok() {
+                    setTickets();
+                }
+
+                @Override
+                public void erro(String msg) {
+                    sairErro(msg) ;
+                }
+            }.execute();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            atualizacaoErro(e.getMessage()) ;
+        }
+
+    }
 
     private void setTickets(){
         try {

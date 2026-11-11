@@ -25,12 +25,13 @@ import br.com.st.anequimconta_stand_dl1.entidade.ContaView;
 import br.com.st.anequimconta_stand_dl1.entidade.Modalidade;
 import br.com.st.anequimconta_stand_dl1.entidade.PedidoView;
 import br.com.st.anequimconta_stand_dl1.impressao.controle.ControleTotaisContaView;
-import br.com.st.anequimconta_stand_dl1.pospag.ControlePosPagamento;
-import br.com.st.anequimconta_stand_dl1.pospag.ControlePosPagamentoPix;
 import br.com.st.anequimconta_stand_dl1.pospag.OnPosCancelamento;
 import br.com.st.anequimconta_stand_dl1.pospag.OnPosCancelamentoPix;
 import br.com.st.anequimconta_stand_dl1.pospag.OnPosPagamento;
 import br.com.st.anequimconta_stand_dl1.pospag.OnPosPagamentoPix;
+import br.com.st.anequimconta_stand_dl1.pospag.PosPagamento;
+import br.com.st.anequimconta_stand_dl1.pospag.payCielo.PosPagamentoPayCielo;
+import br.com.st.anequimconta_stand_dl1.pospag.payCielo.PosPagamentoPixPayCielo;
 import br.com.st.anequimconta_stand_dl1.tipos.TipoModalidade;
 import br.com.st.anequimconta_stand_dl1.ui.FragmentPagamento;
 import br.com.st.anequimconta_stand_dl1.util.UtilSet;
@@ -50,14 +51,14 @@ public class ControleContaPagamento implements OnPosPagamento, OnPosPagamentoPix
     private ContaPag contaPagCorrente ;
     private ContaMultView contaMultView ;
     private int ponteiro ;
-    private ControlePosPagamento controlePosPagamento ;
-    private ControlePosPagamentoPix controlePosPagamentoPix ;
+    private PosPagamento posPagamento;
+    private PosPagamentoPixPayCielo posPagamentoPixPayCielo ;
 
     public ControleContaPagamento(FragmentPagamento f, OnControlePagamento onControlePagamento) {
         this.ctx = f.getActivity();
         this.onControlePagamento = onControlePagamento ;
-        controlePosPagamento = new ControlePosPagamento(f) ;
-        controlePosPagamentoPix = new ControlePosPagamentoPix(f) ;
+        posPagamento = new PosPagamentoPayCielo(f) ;
+        posPagamentoPixPayCielo = new PosPagamentoPixPayCielo(f) ;
        // Log.i("pagamentos_", "criou ContaMult "+contaMult.getUUID()) ;
     }
 
@@ -66,8 +67,8 @@ public class ControleContaPagamento implements OnPosPagamento, OnPosPagamentoPix
         this.caixa = caixa ;
         this.onControlePagamento = onControlePagamento ;
         ContaMult contaMult = new ContaMult(0, UtilSet.getLojaId(ctx), new Date(), UtilSet.getUUID(), caixa.getUUID(), 0, 0) ;
-        controlePosPagamento = new ControlePosPagamento(f) ;
-        controlePosPagamentoPix = new ControlePosPagamentoPix(f) ;
+        posPagamento = new PosPagamentoPayCielo(f) ;
+        posPagamentoPixPayCielo = new PosPagamentoPixPayCielo(f) ;
         //contaMultView = new ContaMultView(new ArrayList<>(), contaMult, new ArrayList<>()) ;
         Log.i("pagamentos_", "criou ContaMult "+contaMult.getUUID()) ;
     }
@@ -152,6 +153,32 @@ public class ControleContaPagamento implements OnPosPagamento, OnPosPagamentoPix
             e.printStackTrace();
             onControlePagamento.pagamentoErro(e.getMessage());
         }
+    }
+
+    public void addNumero(String numero){
+        DaoFilters f = new DaoFilters();
+        f.add(new DaoFilter("NUMERO", "=", numero));
+        f.add(new DaoFilter("STATUS", "=", "1"));
+        try {
+            new ConexaoContas(ctx, f, "") {
+                @Override
+                public void contasOk(List<Conta> l) {
+                    if (l.size() > 0)
+                        addContas(l.get(0).getUUID());
+                     else onControlePagamento.pagamentoErro("Conta ["+numero+"] não encontrada!");
+                }
+
+                @Override
+                public void contasErro(String msg) {
+                    onControlePagamento.pagamentoErro(msg);
+                }
+            }.executar();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+            onControlePagamento.pagamentoErro(e.getMessage());
+        }
+
+
     }
 
     public void addContas(String uuid){
@@ -284,9 +311,9 @@ public class ControleContaPagamento implements OnPosPagamento, OnPosPagamentoPix
                 if ((modalidade.getTipoModalidade() == TipoModalidade.pgCartao) ||
                         (modalidade.getTipoModalidade() == TipoModalidade.pgDebito) ||
                         (modalidade.getTipoModalidade() == TipoModalidade.pgCredito))
-                    controlePosPagamento.pagamento(contaPagCorrente, this);
+                    posPagamento.pagamento(contaPagCorrente, this);
                 else if (modalidade.getTipoModalidade() == TipoModalidade.pgPIX)
-                    controlePosPagamento.pagamento(contaPagCorrente, this);
+                    posPagamento.pagamento(contaPagCorrente, this);
                 else onSucess(contaPagCorrente);
           } else onError("Opção Inválida!");
     }
@@ -307,9 +334,9 @@ public class ControleContaPagamento implements OnPosPagamento, OnPosPagamentoPix
         if ((modalidade.getTipoModalidade() == TipoModalidade.pgCartao) ||
                 (modalidade.getTipoModalidade() == TipoModalidade.pgDebito) ||
                 (modalidade.getTipoModalidade() == TipoModalidade.pgCredito))
-            controlePosPagamento.cancelamento(pag, this);
+            posPagamento.cancelamento(pag, this);
         else if (modalidade.getTipoModalidade() == TipoModalidade.pgPIX)
-            controlePosPagamento.cancelamento(pag, this);
+            posPagamento.cancelamento(pag, this);
         else onCancelamentoSucess(pag);
     }
 

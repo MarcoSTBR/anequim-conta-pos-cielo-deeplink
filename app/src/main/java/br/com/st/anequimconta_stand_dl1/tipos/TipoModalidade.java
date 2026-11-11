@@ -10,7 +10,8 @@ public enum TipoModalidade {
     pgDesconto("pgDesconto"),
     pgGorjeta("pgGorjeta"),
     pgPIX("pgPIX"),
-    pgQRCode("pgQRCode");
+    pgQRCode("pgQRCode"),
+    pgRefeicao("pgRefeicao");
 
     public String valor;
 

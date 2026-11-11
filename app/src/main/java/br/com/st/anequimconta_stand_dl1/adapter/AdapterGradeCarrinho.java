@@ -49,11 +49,19 @@ public abstract class AdapterGradeCarrinho extends RecyclerView.Adapter<AdapterG
         private TextView descricao;
         private TextView produto_add;
         private TextView quantidade_preco;
+        private TextView observacao ;
         private ImageButton mais ;
         private ImageButton menos ;
         public AdapterHolder(@NonNull View itemView) {
             super(itemView);
             descricao = itemView.findViewById(R.id.descricao);
+            descricao.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onObs(list.get(getAdapterPosition())) ;
+                }
+            });
+
             produto_add = itemView.findViewById(R.id.produto_add);
             quantidade_preco = itemView.findViewById(R.id.quantidade_preco);
             mais = itemView.findViewById(R.id.mais) ;
@@ -64,6 +72,7 @@ public abstract class AdapterGradeCarrinho extends RecyclerView.Adapter<AdapterG
             menos.setOnClickListener((View) -> {
                 setMenos(list.get(getAdapterPosition()));
             });
+            observacao = itemView.findViewById(R.id.observacao) ;
         }
 
         public void bind(PedidoItemView it) {
@@ -74,6 +83,10 @@ public abstract class AdapterGradeCarrinho extends RecyclerView.Adapter<AdapterG
                 mais.setVisibility(View.GONE);
             else mais.setVisibility(View.VISIBLE);
 
+            if (it.getPedidoItem().getOBS().length() > 0){
+                observacao.setVisibility(View.VISIBLE);
+                observacao.setText(it.getPedidoItem().getOBS());
+            } else observacao.setVisibility(View.GONE);
             setValores(it, p);
             setProdutoAdd(it, p);
         }
@@ -148,9 +161,9 @@ public abstract class AdapterGradeCarrinho extends RecyclerView.Adapter<AdapterG
                 produto_add.setVisibility(View.VISIBLE);
                 produto_add.setText(txt);
             } else produto_add.setVisibility(View.GONE);
-
         }
     }
     public abstract void onChange(PedidoItemView it) ;
+    public abstract void onObs(PedidoItemView it) ;
     public abstract void excluirItem(PedidoItemView it) ;
 }

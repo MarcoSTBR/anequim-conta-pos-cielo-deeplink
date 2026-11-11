@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.util.Log;
 
 import br.com.st.anequimconta_stand_dl1.dao.AcompanhamentoDao;
+import br.com.st.anequimconta_stand_dl1.daoclass.DaoFilters;
 import br.com.st.anequimconta_stand_dl1.entidade.Acompanhamento;
 import br.com.st.anequimconta_stand_dl1.util.UtilSet;
 import org.json.JSONArray;
@@ -16,15 +17,15 @@ public abstract class ConexaoAcompanhamento extends ConexaoServer{
 
     private Activity ctx ;
 
-    public ConexaoAcompanhamento(Activity ctx) throws MalformedURLException {
+    public ConexaoAcompanhamento(Activity ctx, DaoFilters filters, String order) throws MalformedURLException {
         super(ctx);
         msg = "" ;
         method = "POST" ;
         this.ctx = ctx;
         maps.put("class","AfoodAcompanhamento") ;
-        maps.put("method","loadAll") ;
-//        maps.put("filters",filters.getJSON()) ;
-//        maps.put("order", order) ;
+        maps.put("method","loadAll2") ;
+        maps.put("filters",filters.getJSON()) ;
+        maps.put("order", order) ;
         url = new URL(UtilSet.getServidorMaster(ctx)) ;
     }
 

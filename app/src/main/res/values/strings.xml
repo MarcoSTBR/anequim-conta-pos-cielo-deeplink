@@ -60,5 +60,8 @@
 
     <string name="intent_scheme_same_activity">dlsameactivityscheme</string>
 
+    <string name="anequim_stand">anequim_stand</string>
+    <string name="anequim_stand_imp">impressao</string>
+
 
 </resources>

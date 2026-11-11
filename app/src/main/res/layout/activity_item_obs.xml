@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ActivityItemObs">
+
+    <TextView
+        android:id="@+id/produto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:text="COCA COLA 300ML"
+        android:textColor="@color/colorBranco"
+        android:background="@drawable/botao_customizado"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/obs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="13dp"
+        android:gravity="center"
+        android:text="SEM GELO"
+        android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageButton
+            android:id="@+id/sair"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back_space"
+            android:background="@drawable/botao_customizado"
+            />
+        <ImageButton
+            android:id="@+id/limpar"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_lixeira"
+            android:background="@drawable/botao_customizado"
+            />
+        <ImageButton
+            android:id="@+id/gravar"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_ok"
+            android:background="@drawable/botao_customizado"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/grade_obs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/layout_grade_obs"
+        />
+
+
+</LinearLayout>

@@ -19,6 +19,8 @@ import java.util.List;
 public abstract class ConexaoRecebimentoPos extends ConexaoServer{
 
 
+    private final String TAG = "recebimentoPos" ;
+
     public ConexaoRecebimentoPos(Activity ctx, DaoFilters f, String order) throws MalformedURLException {
         super(ctx);
         msg = "Consultando Recebimento...";
@@ -37,7 +39,7 @@ public abstract class ConexaoRecebimentoPos extends ConexaoServer{
         try {
             JSONObject j = new JSONObject(s) ;
             if (j.getString("status").equals("success")) {
-                    setJSON(j.getJSONArray("data"));
+                setJSON(j.getJSONArray("data"));
             } else {
                 recebimentoPosErro(j.getString("data"));
             }
@@ -50,7 +52,9 @@ public abstract class ConexaoRecebimentoPos extends ConexaoServer{
     private void setJSON(JSONArray j) throws JSONException {
         List<RecebimentoPos> l = new ArrayList<>() ;
         for (int i = 0 ; i < j.length() ; i++) {
-            l.add(new RecebimentoPos(j.getJSONObject(i)));
+            RecebimentoPos r = new RecebimentoPos(j.getJSONObject(i)) ;
+            l.add(r);
+            Log.i(TAG, r.getRecibo()) ;
         }
         recebimentoPosOk(l) ;
     }

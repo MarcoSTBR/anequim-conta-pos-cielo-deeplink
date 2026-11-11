@@ -2,6 +2,7 @@ package br.com.st.anequimconta_stand_dl1.pospag.payCielo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Base64;
 import android.util.Log;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -11,6 +12,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.net.MalformedURLException;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.List;
 
@@ -101,7 +103,7 @@ public class PosPagamentoPayCielo implements PosPagamento {
         setModalidade();
         /* aqui */
         int id = UtilSet.getProximoNumero(ctx);
-        recebimentoPos = new RecebimentoPos(0, UtilSet.getUUID(), id, String.valueOf(id), new Date(), pag.getUUID(), TipoRecebimentoPos.tr_pendete, 1, "", "");
+        recebimentoPos = new RecebimentoPos(0, UtilSet.getUUID(), id, String.valueOf(id), new Date(), pag.getUUID(), TipoRecebimentoPos.tr_pendete, 1, "");
         startPagamento();
     }
 
@@ -116,15 +118,16 @@ public class PosPagamentoPayCielo implements PosPagamento {
 
             try {
                if (resultCode == Activity.RESULT_OK) {
-
                    if (status.equals("success")) {
-                       Log.i(TAG, "success resp " + resp);
-                       JSONObject j = new JSONObject(resp);
+                       Log.i(TAG, "success resp  rec " + resp);
+                       Log.i(TAG, "success resp  byte " + resp.getBytes(StandardCharsets.UTF_8));
+                       Log.i(TAG, "success resp  string " + resp);
+                       JSONObject j = new JSONObject(resp) ;
                        Log.i(TAG, "success resp OK " + resp);
                       // recebimentoPos.setPagamento_uuid(j.getJSONArray("payments").getJSONObject(0).getString("authCode"));
                        recebimentoPos.setPagamento_uuid(j.getString("id"));
                        recebimentoPos.setStatus_rec(TipoRecebimentoPos.tr_confirmado);
-                       recebimentoPos.setRecibo(j.toString());
+                       recebimentoPos.setRecibo(resp );
                        insertRec(recebimentoPos) ;
                    } else onPosPagamento.onError(mensagem);
                } else {
@@ -135,19 +138,16 @@ public class PosPagamentoPayCielo implements PosPagamento {
                 Log.i(TAG, "pago JSONException " + e.getMessage());
                 onPosPagamento.onError(e.getMessage());
             }
-
         } else onPosPagamento.onError("Sem Retorno");
-
     }
 
     private void insertRec(RecebimentoPos rc){
         try {
-            Log.i(TAG, "RecebimentoPos rc ");
-
+            Log.i(TAG, "RecebimentoPos rc "+rc.toString());
             new ConexaoRecebimentoEditPos(ctx, rc) {
                 @Override
                 public void recebimentoEditPosOk(RecebimentoPos r) {
-                    //RecebimentoPosDao.getRecebimentoPosDao(ctx).insert(recebimentoPos.geJSON());
+                    Log.i(TAG, "RecebimentoPos "+r.toString());
                     onPosPagamento.onSucess(contaPag);
                 }
 
@@ -177,31 +177,28 @@ public class PosPagamentoPayCielo implements PosPagamento {
             Log.e(TAG, "resp " + resp) ;
             Log.e(TAG, "mensagem " + mensagem) ;
             Log.e(TAG, "status "+ status) ;
-            try {
-                if (resultCode == Activity.RESULT_OK) {
-                    if (status.equals("success")) {
-                        JSONObject j = new JSONObject(resp);
+            if (resultCode == Activity.RESULT_OK) {
+                 if (status.equals("success")) {
+                       // byte[] decoded = Base64.decode(resp, Base64.DEFAULT);
+                       // String jsonOriginal = new String(decoded, StandardCharsets.UTF_8);
+                        //recebimentoPos.setRecibo(jsonOriginal);
                         //recebimentoPos.setStatus_rec(TipoRecebimentoPos.tr_canelado);
                         recebimentoPos.setStatus(0);
-                        editaRec(recebimentoPos, j) ;
+                        editaRec(recebimentoPos) ;
 //                        RecebimentoPosDao.getRecebimentoPosDao(ctx).update(recebimentoPos.geJSON());
-                    } else onPosCancelamento.onCancelamentoErro(mensagem);
-                }
-            } catch (JSONException e) {
-                 e.printStackTrace();
-                 onPosCancelamento.onCancelamentoErro(e.getMessage());
+                 } else onPosCancelamento.onCancelamentoErro(mensagem);
             }
         } else onPosCancelamento.onCancelamentoErro("Sem Retorno");
     }
 
-    private void editaRec(RecebimentoPos rc, JSONObject j){
+    private void editaRec(RecebimentoPos rc){
         try {
-            String atk =  j.getString("atk") ;
-            String json = j.toString() ;
             new ConexaoRecebimentoEditPos(ctx, rc) {
                 @Override
                 public void recebimentoEditPosOk(RecebimentoPos r) {
-                    recebimentoPos =  new RecebimentoPos(0, UtilSet.getUUID(), UtilSet.getProximoNumero(ctx), atk, new Date(), contaPag.getUUID(), TipoRecebimentoPos.tr_canelado, 1, atk, json);
+                    Log.e(TAG, "recebimentoEditPosOk r.getRecibo() "+ r.getRecibo()) ;
+                    onPosCancelamento.onCancelamentoSucess(contaPag);
+                    recebimentoPos =  new RecebimentoPos(0, UtilSet.getUUID(), UtilSet.getProximoNumero(ctx), rc.getPagamento_uuid(), new Date(), contaPag.getUUID(), TipoRecebimentoPos.tr_canelado, 1, rc.getRecibo());
                     inserirCancelamento(recebimentoPos);
                 }
 
@@ -217,19 +214,22 @@ public class PosPagamentoPayCielo implements PosPagamento {
             e.printStackTrace();
             onPosCancelamento.onCancelamentoErro(e.getMessage());
         }
-
     }
 
     private void inserirCancelamento(RecebimentoPos rc){
         try {
+            Log.e(TAG, "inserirCancelamento rc.getRecibo() "+ rc.getRecibo()) ;
+
             new ConexaoRecebimentoEditPos(ctx, rc) {
                 @Override
                 public void recebimentoEditPosOk(RecebimentoPos r) {
+                    Log.e(TAG, "recebimentoEditPosOk r.getRecibo() "+ r.getRecibo()) ;
                     onPosCancelamento.onCancelamentoSucess(contaPag);
                 }
 
                 @Override
                 public void recebimentoEditPosErro(String msg) {
+                    Log.e(TAG, "recebimentoEditPosErro "+ msg) ;
                     onPosCancelamento.onCancelamentoErro(msg);
 
                 }

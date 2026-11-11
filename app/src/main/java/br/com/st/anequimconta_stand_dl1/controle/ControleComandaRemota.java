@@ -2,7 +2,6 @@ package br.com.st.anequimconta_stand_dl1.controle;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
-import android.os.Build;
 import android.util.Log;
 
 import br.com.st.anequimconta_stand_dl1.activity.ActivityEnvioPedidos;
@@ -10,7 +9,7 @@ import br.com.st.anequimconta_stand_dl1.conexao.ConexaoRequisicaoRemota;
 import br.com.st.anequimconta_stand_dl1.controle.listeners.OnControleComandaRemota;
 import br.com.st.anequimconta_stand_dl1.entidade.ImpressaoRemota;
 import br.com.st.anequimconta_stand_dl1.impressao.ComandaRemotaBitMap;
-import br.com.st.anequimconta_stand_dl1.impressao.ImpressaoBitmapBuilder;
+import br.com.st.anequimconta_stand_dl1.impressao.cielo.ImpressaoBitmap;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.ListenerImpressaoBipMap;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.OnImpressaoBitMap;
 
@@ -29,7 +28,7 @@ public class ControleComandaRemota implements ListenerImpressaoBipMap {
     public ControleComandaRemota(ActivityEnvioPedidos ctx, OnControleComandaRemota onControleComandaRemota) {
         this.ctx = ctx;
         this.onControleComandaRemota = onControleComandaRemota;
-        onImpressaoBitMap = new ImpressaoBitmapBuilder(ctx, this).getImpressao(ctx) ;
+        onImpressaoBitMap = new ImpressaoBitmap(ctx, this) ;
     }
 
     public void requisicao(JSONArray req){

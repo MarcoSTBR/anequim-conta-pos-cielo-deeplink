@@ -1,14 +1,16 @@
 package br.com.st.anequimconta_stand_dl1.activity;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.cielo.ordermanager.sdk.orders.OrderManagerController;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,20 +20,18 @@ import java.text.DecimalFormat;
 import br.com.st.anequimconta_stand_dl1.R;
 import br.com.st.anequimconta_stand_dl1.databinding.ActivityCancelamentoBinding;
 import br.com.st.anequimconta_stand_dl1.entidade.RecebimentoPos;
+import br.com.st.anequimconta_stand_dl1.pospag.payCielo.orders.OrderManagerControllerJava;
+import cielo.orders.domain.CancellationRequest;
+import cielo.sdk.order.cancellation.CancellationListener;
+import cielo.sdk.order.payment.PaymentError;
 
-public class ActivityCancelamento extends AppCompatActivity {
+public class ActivityCancelamento extends AppCompatActivity implements CancellationListener{
 
-    private final String BUNDLE_EXTRA_RETURN_SCHEME = "returnscheme" ;
-    private final String BUNDLE_EXTRA_ATK = "atk";
-    private final String BUNDLE_EXTRA_AMOUNT = "amount" ;
-    private final String BUNDLE_EXTRA_EDITABLE_AMOUNT = "editable_amount" ;
-    private final String BUNDLE_EXTRA_THIRD_PARTY_THEME_ENABLED = "third_party_theme_enabled" ;
 
+    private static final String TAG = "CANCEL_PAYMENT";
+    private OrderManagerController orderManagerController;
     private ActivityCancelamentoBinding binding ;
-    private String data ;
     private RecebimentoPos recebimentoPos ;
-    private String amount  ;
-    private String atk  ;
     private boolean iniciar = false ;
 
     @Override
@@ -39,27 +39,21 @@ public class ActivityCancelamento extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityCancelamentoBinding.inflate(getLayoutInflater()) ;
         setContentView(binding.getRoot());
-        data = getIntent().getStringExtra("DATA") ;
-        Log.i("stone_", "data " + data.toString()) ;
+        String data = getIntent().getStringExtra("DATA") ;
+        Log.i(TAG, "data " + data.toString()) ;
 
         binding.sair.setOnClickListener(v -> sairSemCancelar());
         binding.tentarNovamente.setOnClickListener(v-> executar());
         binding.tentarNovamente.setText("Cancelar");
-        setRecebimento();
-    }
+        // FIX PARA DX8000 DEBUG - Inicializa e espera o service da Cielo
+        orderManagerController = OrderManagerController.Companion.getInstance(this);
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (!iniciar){
-           iniciar = true ;
-           buscarCanc();
-        }
-
-    }
-
-    private void buscarCanc() {
-
+        setRecebimento(data);
+/*
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            setRecebimento(data);
+        }, 1500);
+*/
     }
 
     private void sairSemCancelar() {
@@ -67,23 +61,44 @@ public class ActivityCancelamento extends AppCompatActivity {
         itt.putExtra("status", "erro") ;
         itt.putExtra("mensagem", "Sem Cancelamento") ;
         setResult(RESULT_CANCELED, itt);
-
     }
 
 
-    private void setRecebimento() {
+    private void setRecebimento(String data) {
         try {
             recebimentoPos = new RecebimentoPos(new JSONObject(data)) ;
-            JSONObject j = new JSONObject(recebimentoPos.getRecibo()) ;
-            amount = j.getString("amount") ;
-            atk = j.getString("atk") ;
-            Double i = Integer.parseInt(amount) / 100.0 ;
-            Log.i("stone_", "amount " + amount) ;
-            Log.i("stone_", "atk " + atk) ;
-            binding.textAtk.setText("Atk "+atk);
+            String d = recebimentoPos.getRecibo();
+            Log.i(TAG, "d "+d);
+            JSONObject j = new JSONObject(d) ;
+            Log.i(TAG, "recibo");
+            Log.i(TAG, j.toString());
+            JSONObject jj = j.getJSONArray("payments").getJSONObject(0) ;
+            String id = j.getString("id") ;
+            Long amount = jj. getLong("amount") ;
+            String authCode = jj.getString("authCode") ;
+            String cieloCode = jj.getString("cieloCode") ;
+            String merchantCode = jj.getString("merchantCode") ;
+            Double i = amount / 100.0 ;
+            Log.i(TAG, "id " + id) ;
+            Log.i(TAG, "amount " + amount) ;
+            Log.i(TAG, "authCode " + authCode) ;
+            binding.textAtk.setText("authCode "+authCode);
             binding.textAmount.setText(new DecimalFormat("R$ #0.00").format(i));
+
+            CancellationRequest request = new CancellationRequest.Builder()
+                    .orderId(id)
+                    .authCode(authCode)
+                    .cieloCode(cieloCode)
+                    .value(amount)
+                    .ec(merchantCode)
+                    .build();
+            OrderManagerControllerJava orderManagerController = OrderManagerControllerJava.getInstance(this);
+
+            orderManagerController.cancelOrder(request, this) ;
+
         } catch (JSONException e) {
             e.printStackTrace();
+            Log.i(TAG, "JSONException "+e.getMessage()) ;
             setResult(RESULT_CANCELED);
             alertSair("Erro: "+e.getMessage()) ;
         }
@@ -91,75 +106,10 @@ public class ActivityCancelamento extends AppCompatActivity {
 
     private void executar(){
         binding.tentarNovamente.setText("Tentar Novamente");
-        String deepLinkReturnScheme = getString(R.string.scheme_return_capture) ;
-
-        Uri uriBuilder = new Uri.Builder()
-                .scheme("cancel-app")
-                .authority("cancel")
-                .appendQueryParameter(BUNDLE_EXTRA_RETURN_SCHEME, deepLinkReturnScheme)
-                .appendQueryParameter(BUNDLE_EXTRA_ATK, atk)
-                .appendQueryParameter(BUNDLE_EXTRA_AMOUNT, amount)
-                .appendQueryParameter(BUNDLE_EXTRA_EDITABLE_AMOUNT, "false")
-                .appendQueryParameter(BUNDLE_EXTRA_THIRD_PARTY_THEME_ENABLED, "true")
-                .build() ;
-
-
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setData(uriBuilder) ;
-        startActivity(intent) ;
-
-    }
-
-    @Override
-    protected void onNewIntent(@NonNull Intent intent) {
-        super.onNewIntent(intent);
-        Log.i("stone_", "cancela onNewIntent ") ;
-        String ms = "Cancelamento OK" ;
-        Boolean ok = false ;
-        Intent itt = new Intent();
-        JSONObject j = new JSONObject() ;
-        if ((intent != null) && (intent.getData() != null)){
-            try {
-                Log.i("stone_", "cancela "+intent.getData().toString()) ;
-                String[] data =  intent.getData().toString().replace("deeplink_capture://cancel?","").split("&") ;
-                for (String ss : data){
-                    String[] data_add = ss.split("=") ;
-                    j.put(data_add[0], data_add[1]) ;
-                    Log.i("stone_", "cancela "+data_add[0] + " "+data_add[1]) ;
-                    if (data_add[0].equals("success")) {
-                        if (data_add[1].equals("true")) {
-                            ok = true ;
-                            itt.putExtra("status", "success");
-                        } else {
-                            itt.putExtra("status", "erro") ;
-                        }
-                    }
-                    if (!ok && data_add[0].equals("reason"))
-                        ms = "Erro [reason "+data_add[1]+"]" ;
-                   //     itt.putExtra("status", "success") ;
-
-                }
-                itt.putExtra("mensagem", ms) ;
-                itt.putExtra("resp", j.toString()) ;
-                setResult(RESULT_OK, itt);
-                //alertSair("Cancelamento OK") ;
-                sairOk(j);
-            } catch (JSONException e) {
-                e.printStackTrace();
-                setResult(RESULT_CANCELED);
-                alertSair("Erro: "+e.getMessage()) ;
-            }
-        } else {
-            itt.putExtra("status", "erro") ;
-            itt.putExtra("mensagem", "Operação Cancelada!") ;
-            setResult(RESULT_CANCELED, itt);
-            alertSair("Operação Cancelada!") ;
-        }
     }
 
     private void sairOk(JSONObject j){
-        Log.i("stone_", "saiu direto "+j.toString()) ;
+        Log.i(TAG, "saiu direto "+j.toString()) ;
         finish();
     }
 
@@ -171,5 +121,42 @@ public class ActivityCancelamento extends AppCompatActivity {
                 .setMessage(msg)
                 .setPositiveButton("Ok", (dialogInterface, i) -> finish())
                 .show();
+    }
+
+    @Override
+    public void onCancel() {
+        Intent i = new Intent() ;
+        i.putExtra("status", "erro") ;
+        i.putExtra("mensagem", "Operação Cancelada!") ;
+        setResult(RESULT_CANCELED, i);
+        Log.i(TAG, "onCancel ") ;
+        finish();
+    }
+
+    @Override
+    public void onSuccess(@NonNull cielo.orders.domain.Order order) {
+        Intent i = new Intent() ;
+        Gson g = new GsonBuilder()
+                .setPrettyPrinting()
+                .serializeNulls()
+                .create() ;
+
+        Log.i(TAG, "onSuccess "+ g.toJson(order)) ;
+        i.putExtra("resp",  g.toJson(order));
+        i.putExtra("status", "success");
+        i.putExtra("mensagem", "Cancelamento OK!") ;
+        setResult(RESULT_OK, i);
+        Log.i(TAG, "onSuccess "+order.toString()) ;
+        finish();
+    }
+
+    @Override
+    public void onError(@NonNull PaymentError paymentError) {
+        Intent i = new Intent() ;
+        i.putExtra("status", "erro") ;
+        i.putExtra("mensagem", paymentError.getDescription()) ;
+        setResult(RESULT_CANCELED, i);
+        Log.i(TAG, "onError "+paymentError.getDescription()) ;
+        finish();
     }
 }

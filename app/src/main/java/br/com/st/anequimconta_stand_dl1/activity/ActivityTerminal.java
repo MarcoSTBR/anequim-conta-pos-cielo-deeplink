@@ -85,7 +85,7 @@ public class ActivityTerminal extends AppCompatActivity {
 
             }
         }.executar();
-        ;
+
     }
 
     public void setDadosTerminal(Terminal t) {

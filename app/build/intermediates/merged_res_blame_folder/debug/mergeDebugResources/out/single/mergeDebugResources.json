@@ -252,6 +252,10 @@
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_start.xml"
     },
     {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_obs.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_obs.xml"
+    },
+    {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_configuracao.xml.flat",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_configuracao.xml"
     },
@@ -440,6 +444,10 @@
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_conf_mod_pos.xml"
     },
     {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_item_obs.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_item_obs.xml"
+    },
+    {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_st.webp.flat",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-mdpi\\ic_logo_st.webp"
     },
@@ -504,6 +512,10 @@
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_contas_pagas.xml"
     },
     {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_ambiente.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_ambiente.xml"
+    },
+    {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_menu_camera.xml.flat",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_menu_camera.xml"
     },
@@ -514,6 +526,10 @@
     {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_layout_grade_contas_pagas.xml.flat",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\layout_grade_contas_pagas.xml"
+    },
+    {
+        "merged": "br.com.st.anequimconta_stand_dl1.app-debug-4:/layout_layout_grade_carrinho.xml.flat",
+        "source": "br.com.st.anequimconta_stand_dl1.app-main-6:/layout/layout_grade_carrinho.xml"
     },
     {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-mdpi_ic_logo_round.webp.flat",
@@ -572,6 +588,10 @@
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_conta_print.xml"
     },
     {
+        "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_baseline_credit_card_24.xml.flat",
+        "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\baseline_credit_card_24.xml"
+    },
+    {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_carrinho.xml.flat",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\drawable\\ic_carrinho.xml"
     },
@@ -604,10 +624,6 @@
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "br.com.st.anequimconta_stand_dl1.app-debug-4:/layout_activity_add_pedido.xml.flat",
-        "source": "br.com.st.anequimconta_stand_dl1.app-main-6:/layout/activity_add_pedido.xml"
-    },
-    {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\layout_activity_add_pedido.xml.flat",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\layout\\activity_add_pedido.xml"
     },
@@ -622,10 +638,6 @@
     {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\mipmap-hdpi_ic_logo_st_foreground.webp.flat",
         "source": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-main-6:\\mipmap-hdpi\\ic_logo_st_foreground.webp"
-    },
-    {
-        "merged": "br.com.st.anequimconta_stand_dl1.app-debug-4:/drawable_baseline_credit_card_24.xml.flat",
-        "source": "br.com.st.anequimconta_stand_dl1.app-main-6:/drawable/baseline_credit_card_24.xml"
     },
     {
         "merged": "C:\\Users\\Marco\\.gradle\\daemon\\8.7\\br.com.st.anequimconta_stand_dl1.app-debug-4:\\drawable_ic_contas.xml.flat",

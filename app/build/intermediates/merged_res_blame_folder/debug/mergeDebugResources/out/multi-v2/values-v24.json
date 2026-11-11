@@ -4,7 +4,26 @@
             "outputFile": "br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-2:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\0342b24808cf0757a9ddc0ff61b360f9\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\04cbd2f63b8bdc9a78b2b72b7cea2cec\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,9,12,15",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,140,239,326,427,626,839,1040",
+                        "endLines": "2,3,4,5,8,11,14,17",
+                        "endColumns": "84,98,86,100,10,10,10,10",
+                        "endOffsets": "135,234,321,422,621,834,1035,1250"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,11,14,17",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "347,432,531,618,719,918,1131,1332",
+                        "endLines": "4,5,6,7,10,13,16,19",
+                        "endColumns": "84,98,86,100,10,10,10,10",
+                        "endOffsets": "427,526,613,714,913,1126,1327,1542"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\1edcde9382a2da2ef62dfacf9fa90702\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,32 +40,13 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\83d0f967348f7fc064a73053fc1815f4\\transformed\\appcompat-1.7.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\ebef5980ea20bb18f98828920b2bb3ce\\transformed\\appcompat-1.7.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
                         "startOffsets": "55,212",
                         "endColumns": "156,134",
                         "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\fac1e89359055ac2dbedec5fc865ff01\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,9,12,15",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,140,239,326,427,626,839,1040",
-                        "endLines": "2,3,4,5,8,11,14,17",
-                        "endColumns": "84,98,86,100,10,10,10,10",
-                        "endOffsets": "135,234,321,422,621,834,1035,1250"
-                    },
-                    "to": {
-                        "startLines": "4,5,6,7,8,11,14,17",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "347,432,531,618,719,918,1131,1332",
-                        "endLines": "4,5,6,7,10,13,16,19",
-                        "endColumns": "84,98,86,100,10,10,10,10",
-                        "endOffsets": "427,526,613,714,913,1126,1327,1542"
                     }
                 }
             ]

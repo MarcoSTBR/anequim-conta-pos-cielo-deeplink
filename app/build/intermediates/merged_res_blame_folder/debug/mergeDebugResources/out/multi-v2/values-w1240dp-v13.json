@@ -4,7 +4,7 @@
             "outputFile": "br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-2:/values-w1240dp-v13/values-w1240dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\ST\\ProjetoAnequimPlus\\AppCielo\\Conta\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
+                    "source": "C:\\ST\\ProjetoAnequimPlus\\AppCielo\\anequim-conta-pos-cielo-deeplink\\app\\src\\main\\res\\values-w1240dp\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

@@ -25,6 +25,8 @@
     <string name="abertura_fechamento_imprimir">Imprimir</string>
     <string name="abertura_fechamento_voltar">Voltar</string>
     <string name="action_settings">Settings</string>
+    <string name="anequim_stand">anequim_stand</string>
+    <string name="anequim_stand_imp">impressao</string>
     <string name="app_name">Anequim Conta</string>
     <string name="caixa">Caixa</string>
     <string name="cancel_order">Cancelar Ordem</string>

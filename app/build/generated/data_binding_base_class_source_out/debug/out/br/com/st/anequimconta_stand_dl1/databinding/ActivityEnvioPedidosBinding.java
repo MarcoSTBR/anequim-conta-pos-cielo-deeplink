@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import br.com.st.anequimconta_stand_dl1.R;
@@ -24,12 +25,17 @@ public final class ActivityEnvioPedidosBinding implements ViewBinding {
   public final ImageView bitmensagem;
 
   @NonNull
+  public final RecyclerView gradeAmbiente;
+
+  @NonNull
   public final TextView txtmensagem;
 
   private ActivityEnvioPedidosBinding(@NonNull LinearLayout rootView,
-      @NonNull ImageView bitmensagem, @NonNull TextView txtmensagem) {
+      @NonNull ImageView bitmensagem, @NonNull RecyclerView gradeAmbiente,
+      @NonNull TextView txtmensagem) {
     this.rootView = rootView;
     this.bitmensagem = bitmensagem;
+    this.gradeAmbiente = gradeAmbiente;
     this.txtmensagem = txtmensagem;
   }
 
@@ -66,13 +72,20 @@ public final class ActivityEnvioPedidosBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.grade_ambiente;
+      RecyclerView gradeAmbiente = ViewBindings.findChildViewById(rootView, id);
+      if (gradeAmbiente == null) {
+        break missingId;
+      }
+
       id = R.id.txtmensagem;
       TextView txtmensagem = ViewBindings.findChildViewById(rootView, id);
       if (txtmensagem == null) {
         break missingId;
       }
 
-      return new ActivityEnvioPedidosBinding((LinearLayout) rootView, bitmensagem, txtmensagem);
+      return new ActivityEnvioPedidosBinding((LinearLayout) rootView, bitmensagem, gradeAmbiente,
+          txtmensagem);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -15,8 +15,8 @@ import br.com.st.anequimconta_stand_dl1.entidade.PedidoTicketView;
 import br.com.st.anequimconta_stand_dl1.entidade.PedidoTiket;
 import br.com.st.anequimconta_stand_dl1.entidade.Produto;
 import br.com.st.anequimconta_stand_dl1.entidade.ProdutoTicket;
-import br.com.st.anequimconta_stand_dl1.impressao.ImpressaoBitmapBuilder;
 import br.com.st.anequimconta_stand_dl1.impressao.ImpressaoPedidoTicketBitMap;
+import br.com.st.anequimconta_stand_dl1.impressao.cielo.ImpressaoBitmap;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.ListenerImpressaoBipMap;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.OnImpressaoBitMap;
 import br.com.st.anequimconta_stand_dl1.util.UtilSet;
@@ -36,7 +36,7 @@ public class ControleTicket implements OnControlePedidoTicketView, ListenerImpre
     public ControleTicket(ActivityEnvioPedidos ctx, OnControleTicket onControleTicket) {
         this.ctx = ctx;
         this.onControleTicket = onControleTicket;
-        onImpressaoBitMap = new ImpressaoBitmapBuilder(ctx, this).getImpressao(ctx) ;
+        onImpressaoBitMap = new ImpressaoBitmap(ctx, this) ;
     }
 
     public void enviarRequisicao(JSONArray req){

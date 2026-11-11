@@ -4,7 +4,7 @@
             "outputFile": "br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-2:/values-id/values-id.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\79b28f2c2d8de02c6e7a7516390b5b9b\\transformed\\jetified-zxing-android-embedded-4.3.0\\res\\values-id\\values-id.xml",
+                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\7fbab21ef4b645cb6cb8c8e5b9876e90\\transformed\\jetified-zxing-android-embedded-4.3.0\\res\\values-id\\values-id.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

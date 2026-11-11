@@ -17,8 +17,8 @@ public class ImpressaoBitpmapGENERICO implements OnImpressaoBitMap {
 
     @Override
     public void imprimirBitMap(Bitmap bitmap) {
-     //   listenerImpressaoBipMap.imprimirBitMapErro("Implementar GENERICO");
-        listenerImpressaoBipMap.imprimirBitMapOk();
+        listenerImpressaoBipMap.imprimirBitMapErro("Implementar GENERICO");
+     //   listenerImpressaoBipMap.imprimirBitMapOk();
 
     }
 

@@ -4,7 +4,7 @@
             "outputFile": "br.com.st.anequimconta_stand_dl1.app-mergeDebugResources-2:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\83d0f967348f7fc064a73053fc1815f4\\transformed\\appcompat-1.7.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\ebef5980ea20bb18f98828920b2bb3ce\\transformed\\appcompat-1.7.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

@@ -75,7 +75,6 @@ public class UtilSet {
         String serial = "unknown" ;
         InfoManager infoManager = new InfoManager() ;
         serial = infoManager.getSettings(ctx).getLogicNumber() ;
-
         return serial ;
     }
 
@@ -224,18 +223,10 @@ public class UtilSet {
 
         }
         return versao;
-//        int verCode = pInfo.versionCode;
     }
 
     public static int getProximoNumero(Context ctx) {
         int i = Integer.parseInt(new SimpleDateFormat("ddHHmmSSS").format(new Date()));
-/*
-        SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(ctx);
-        int i = preference.getInt("STONE_ID",0) ;
-        SharedPreferences.Editor editor = preference.edit();
-        editor.putInt("STONE_ID", ++i) ;
-        editor.commit() ;
-*/
         return i ;
     }
 }

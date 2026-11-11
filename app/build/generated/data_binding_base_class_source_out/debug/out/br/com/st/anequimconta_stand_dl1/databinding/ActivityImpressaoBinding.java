@@ -26,15 +26,11 @@ public final class ActivityImpressaoBinding implements ViewBinding {
   @NonNull
   public final Button sair;
 
-  @NonNull
-  public final Button tentarNovamente;
-
   private ActivityImpressaoBinding(@NonNull LinearLayout rootView, @NonNull TextView mensagem,
-      @NonNull Button sair, @NonNull Button tentarNovamente) {
+      @NonNull Button sair) {
     this.rootView = rootView;
     this.mensagem = mensagem;
     this.sair = sair;
-    this.tentarNovamente = tentarNovamente;
   }
 
   @Override
@@ -76,13 +72,7 @@ public final class ActivityImpressaoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tentarNovamente;
-      Button tentarNovamente = ViewBindings.findChildViewById(rootView, id);
-      if (tentarNovamente == null) {
-        break missingId;
-      }
-
-      return new ActivityImpressaoBinding((LinearLayout) rootView, mensagem, sair, tentarNovamente);
+      return new ActivityImpressaoBinding((LinearLayout) rootView, mensagem, sair);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

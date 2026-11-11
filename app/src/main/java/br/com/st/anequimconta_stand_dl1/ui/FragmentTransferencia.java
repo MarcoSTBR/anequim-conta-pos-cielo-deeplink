@@ -31,6 +31,7 @@ import br.com.st.anequimconta_stand_dl1.entidade.Conta;
 import br.com.st.anequimconta_stand_dl1.entidade.ContaItemTransferenciaView;
 import br.com.st.anequimconta_stand_dl1.entidade.ContaItemView;
 import br.com.st.anequimconta_stand_dl1.entidade.ContaView;
+import br.com.st.anequimconta_stand_dl1.util.ConfiguracoesOperacionais;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +69,9 @@ public class FragmentTransferencia extends Fragment implements OnControleContaVi
     private void selectionarConta() {
         Intent intent = new Intent(getContext(), ActivityPainelContas.class) ;
         intent.putExtra("TITULO", "Contas Abertas!") ;
-        painelConta.launch(intent);
+        if (ConfiguracoesOperacionais.getConfOperacional(this.getContext(), ConfiguracoesOperacionais.operacao.trn_itn))
+          painelConta.launch(intent);
+        else alert("Sem Autorização!");
     }
 
     ActivityResultLauncher<Intent> painelConta = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -88,8 +91,9 @@ public class FragmentTransferencia extends Fragment implements OnControleContaVi
 
     private void addPedido() {
         Intent intent = new Intent(getActivity(), ActivityAddPedido.class) ;
-        addpedido.launch(intent);
-        //  startActivity(new Intent(getActivity(), ActivityAddPedido.class));
+        if (ConfiguracoesOperacionais.getConfOperacional(this.getContext(), ConfiguracoesOperacionais.operacao.trn_itn))
+            addpedido.launch(intent);
+        else alert("Sem Autorização!");
     }
 
     ActivityResultLauncher addpedido = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result-> {

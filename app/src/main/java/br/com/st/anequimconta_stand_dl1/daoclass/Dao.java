@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 import br.com.st.anequimconta_stand_dl1.entidade.Entidade;
-import br.com.st.anequimconta_stand_dl1.tipos.DaoPrimaryKeyTipo;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -68,6 +68,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS VENDA_TICKET") ;
         db.execSQL("DROP TABLE IF EXISTS RECEBIMENTO_POS_PIX") ;
         db.execSQL("DROP TABLE IF EXISTS PEDIDO_TICKET") ;
+        db.execSQL("DROP TABLE IF EXISTS AMBIENTE") ;
     }
 
 
@@ -191,14 +192,17 @@ public class DBHelper extends SQLiteOpenHelper {
                 + "PAGAMENTO_UUID TEXT, "
                 + "VENDA_VISTA_PAG_UUID TEXT, "
                 + "STATUS INTEGER)");
+
+        db.execSQL("CREATE TABLE IF NOT EXISTS AMBIENTE ( "
+                + "id INTEGER PRIMARY KEY, "
+                + "CODIGO TEXT, "
+                + "DESCRICAO TEXT)");
     }
 
     public void limparTudo(Context ctx) {
         SQLiteDatabase db = getDB(ctx).getWritableDatabase() ;
         excluirTabelas(db);
-        //excluirTodasTabelas(db) ;
         criarTabelas(db);
-
     }
 
     public void excluirTodasTabelas(SQLiteDatabase db){

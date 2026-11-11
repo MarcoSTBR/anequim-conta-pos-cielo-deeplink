@@ -7,7 +7,7 @@ import br.com.st.anequimconta_stand_dl1.daoclass.DaoCampos;
 import br.com.st.anequimconta_stand_dl1.daoclass.DaoFilter;
 import br.com.st.anequimconta_stand_dl1.daoclass.DaoFilters;
 import br.com.st.anequimconta_stand_dl1.entidade.Acompanhamento;
-import br.com.st.anequimconta_stand_dl1.tipos.DaoPrimaryKeyTipo;
+import br.com.st.anequimconta_stand_dl1.daoclass.DaoPrimaryKeyTipo;
 
 import org.json.JSONArray;
 import org.json.JSONException;

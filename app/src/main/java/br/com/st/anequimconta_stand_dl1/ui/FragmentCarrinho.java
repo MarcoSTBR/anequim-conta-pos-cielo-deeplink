@@ -22,8 +22,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 
+import org.json.JSONException;
+
 import br.com.st.anequimconta_stand_dl1.R;
 import br.com.st.anequimconta_stand_dl1.activity.ActivityEnvioPedidos;
+import br.com.st.anequimconta_stand_dl1.activity.ActivityItemObs;
 import br.com.st.anequimconta_stand_dl1.adapter.AdapterGradeCarrinho;
 import br.com.st.anequimconta_stand_dl1.controle.ControlePedidoView;
 import br.com.st.anequimconta_stand_dl1.controle.ControlePedidosAnteriores;
@@ -210,12 +213,35 @@ public class FragmentCarrinho extends Fragment {
             }
 
             @Override
+            public void onObs(PedidoItemView it) {
+                addObs(it) ;
+            }
+
+            @Override
             public void excluirItem(PedidoItemView it) {
                 excluirItemView(it);
             }
         });
     }
 
+    private void addObs(PedidoItemView it){
+        Intent intent = new Intent(getContext(), ActivityItemObs.class) ;
+        try {
+            intent.putExtra("DATA", it.getPedidoItem().geJSON().toString()) ;
+            getObs.launch(intent);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            alert(e.getMessage());
+        }
+    }
+
+    ActivityResultLauncher<Intent> getObs = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    atualizaPedido();
+                }
+            }
+    );
     private void excluirItemView(PedidoItemView it) {
         new AlertDialog.Builder(getContext())
                 .setIcon(R.drawable.ic_notification)
@@ -264,9 +290,7 @@ public class FragmentCarrinho extends Fragment {
                 .setTitle("Atenção")
                 .setMessage(msg)
                 .setCancelable(false)
-                .setPositiveButton("OK", (dialogInterface, i) -> {
-                   // irParaVenda();
-                })
+                .setPositiveButton("OK", null)
                 .show();
     }
 

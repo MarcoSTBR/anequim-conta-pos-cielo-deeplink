@@ -3,7 +3,6 @@ package br.com.st.anequimconta_stand_dl1.ui;
 import android.app.AlertDialog;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 
@@ -22,13 +21,11 @@ import br.com.st.anequimconta_stand_dl1.databinding.FragmentListPixBinding;
 import br.com.st.anequimconta_stand_dl1.entidade.Caixa;
 import br.com.st.anequimconta_stand_dl1.pospag.OnListPixPagamentos;
 import br.com.st.anequimconta_stand_dl1.pospag.PosApi;
-import br.com.st.anequimconta_stand_dl1.pospag.PosApiBuilder;
 import br.com.st.anequimconta_stand_dl1.pospag.PosFilter;
-import br.com.st.anequimconta_stand_dl1.pospag.PosPixClient;
 import br.com.st.anequimconta_stand_dl1.pospag.controle.ControleListPixCancelamento;
 import br.com.st.anequimconta_stand_dl1.pospag.PosPagamentoPixView;
+import br.com.st.anequimconta_stand_dl1.pospag.payCielo.PosApiPayCielo;
 import br.com.st.anequimconta_stand_dl1.util.UtilSet;
-import kotlinx.coroutines.debug.internal.AgentInstallationType;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -69,7 +66,7 @@ public class FragmentListPix extends Fragment {
                 onErro(msg);
             }
         };
-        posApi = PosApiBuilder.getApi(getActivity()) ;
+        posApi = new PosApiPayCielo(FragmentListPix.this) ;
         return binding.getRoot() ; // inflater.inflate(R.layout.fragment_list_pix, container, false);
     }
 

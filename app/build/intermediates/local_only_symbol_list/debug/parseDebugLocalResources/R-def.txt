@@ -88,6 +88,7 @@ id action_nav_pedido_corrente_to_nav_pedido_vendas
 id action_nav_pedido_vendas_to_nav_carrinho
 id action_nav_pedido_vendas_to_nav_conta
 id action_nav_pedido_vendas_to_nav_pagamento
+id ambiente_desc
 id appBarLayout
 id app_bar_main
 id b0
@@ -156,6 +157,7 @@ id four_digits
 id frag_view_pager_carrinho
 id grade_acompanhamento
 id grade_acompanhamento_item
+id grade_ambiente
 id grade_conf_mais_vendidos
 id grade_conf_mod_pos
 id grade_contas
@@ -163,12 +165,14 @@ id grade_contas_bitmap
 id grade_contas_pagas
 id grade_item_venda
 id grade_modalidade
+id grade_obs
 id grade_operacionais
 id grade_pagamentos
 id grade_pedidos
 id grade_pospagamentos
 id grade_pospagamentos_pix
 id grade_produtos
+id gravar
 id ic_autenticar
 id ic_configuracao
 id ic_menu_atualizar
@@ -208,6 +212,7 @@ id layout_quantidade
 id layout_rodape
 id layout_valor_parcial
 id lerCodigoBarras
+id limpar
 id mais
 id mais_font_conta
 id mais_lar_conta
@@ -247,6 +252,8 @@ id numero
 id numero_pedido
 id numero_terminal
 id numero_trans
+id obs
+id observacao
 id ok_dest
 id pag_id
 id pag_status
@@ -257,6 +264,7 @@ id parcial
 id pedidos
 id preco
 id precoTotal
+id produto
 id produto_add
 id quant_font_conta
 id quant_lar_conta
@@ -308,6 +316,7 @@ layout activity_entrada
 layout activity_envio_pedidos
 layout activity_impressao
 layout activity_imprimir_contas
+layout activity_item_obs
 layout activity_login
 layout activity_painel_contas
 layout activity_principal
@@ -338,11 +347,13 @@ layout layout_conf_mod_pos
 layout layout_conta_bitmap
 layout layout_grade_acompanhamemto
 layout layout_grade_acompanhamemto_item
+layout layout_grade_ambiente
 layout layout_grade_cancelamento
 layout layout_grade_carrinho
 layout layout_grade_cartao_credito
 layout layout_grade_contas_pagas
 layout layout_grade_modalidade
+layout layout_grade_obs
 layout layout_grade_operacional
 layout layout_grade_painel_conta
 layout layout_grade_pedido_corrente
@@ -373,6 +384,8 @@ string Largura_Impressao_Conta
 string abertura_fechamento_imprimir
 string abertura_fechamento_voltar
 string action_settings
+string anequim_stand
+string anequim_stand_imp
 string app_name
 string caixa
 string cancel_order

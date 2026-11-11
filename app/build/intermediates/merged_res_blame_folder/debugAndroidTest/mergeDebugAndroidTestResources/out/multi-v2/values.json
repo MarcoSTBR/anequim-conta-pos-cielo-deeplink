@@ -4,7 +4,7 @@
             "outputFile": "br.com.st.anequimconta_stand_dl1.test.app-mergeDebugAndroidTestResources-1:/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\262b48ef54011f18ee2f7b5f82b060c1\\transformed\\jetified-core-1.6.1\\res\\values\\values.xml",
+                    "source": "C:\\Users\\Marco\\.gradle\\caches\\transforms-4\\d6ce48e95ad59eb656b2ba684317de84\\transformed\\jetified-core-1.6.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,11",
                         "startColumns": "0,0",

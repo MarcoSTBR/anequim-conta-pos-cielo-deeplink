@@ -48,6 +48,15 @@ android {
 
 dependencies {
 
+
+    // Libs .aar importadas direto da pasta 'libs'
+    implementation(files("libs/order-manager-2.7.2.aar"))
+    implementation(files("libs/event-tracker-1.0.1.aar"))
+    // Dependências do Datadog - são dependências transitivas do event-tracker
+    implementation("com.datadoghq:dd-sdk-android-logs:2.16.0")
+    implementation("com.datadoghq:dd-sdk-android-trace:2.16.0")
+    implementation("com.datadoghq:dd-sdk-android-rum:2.16.0")
+
     implementation(libs.gson)
     implementation(libs.jakewharton)
     implementation(libs.legacy)
@@ -63,13 +72,17 @@ dependencies {
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
     implementation(libs.activity)
+
+
     implementation(fileTree(mapOf(
         "dir" to "libs",
         "include" to listOf("*.aar", "*.jar"),
         "exclude" to listOf("")
     )))
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation(kotlin("script-runtime"))
+  /*  implementation(kotlin("script-runtime"))*/
 }

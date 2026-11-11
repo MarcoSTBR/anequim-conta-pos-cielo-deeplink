@@ -1,11 +1,16 @@
 package br.com.st.anequimconta_stand_dl1.entidade;
 
+import androidx.annotation.NonNull;
+
+import com.google.gson.Gson;
+
 import br.com.st.anequimconta_stand_dl1.pospag.TipoRecebimentoPos;
 import br.com.st.anequimconta_stand_dl1.util.UtilSet;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -18,10 +23,9 @@ public class RecebimentoPos implements Entidade {
     private String conta_pag_uuid;
     private TipoRecebimentoPos status_rec;
     private int status;
-    private String nsu ;
     private String recibo ;
 
-    public RecebimentoPos(int id, String uuid, int pagamento_id, String pagamento_uuid, Date data, String conta_pag_uuid, TipoRecebimentoPos status_rec, int status, String nsu, String recibo) {
+    public RecebimentoPos(int id, String uuid, int pagamento_id, String pagamento_uuid, Date data, String conta_pag_uuid, TipoRecebimentoPos status_rec, int status, String recibo) {
         this.id = id;
         this.uuid = uuid;
         this.pagamento_id = pagamento_id;
@@ -30,7 +34,6 @@ public class RecebimentoPos implements Entidade {
         this.conta_pag_uuid = conta_pag_uuid;
         this.status_rec = status_rec;
         this.status = status;
-        this.nsu = nsu;
         this.recibo = recibo;
     }
 
@@ -44,11 +47,15 @@ public class RecebimentoPos implements Entidade {
         status_rec =  TipoRecebimentoPos.getRecebimentoPos(j.getString("STATUS_REC")) ;
         data = UtilSet.getData(j.getString("DATA")) ;
         pagamento_uuid = j.getString("PAGAMENTO_UUID") ;
-        if (!j.isNull("NSU"))
-           nsu = j.getString("NSU") ;
-        recibo = j.getString("RECIBO") ;
+        recibo =  j.getString("RECIBO") ;
     }
 
+
+    @NonNull
+    @Override
+    public String toString() {
+        return new Gson().toJson(this).toString() ;
+    }
 
     public JSONObject geJSON() throws JSONException {
         SimpleDateFormat dta = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss") ;
@@ -62,8 +69,7 @@ public class RecebimentoPos implements Entidade {
         j.put("STATUS", status);
         j.put("STATUS_REC", status_rec.valor);
         j.put("DATA", dta.format(data));
-        j.put("NSU", nsu);
-        j.put("RECIBO", recibo);
+        j.put("RECIBO",recibo);
         return j;
     }
 
@@ -130,14 +136,6 @@ public class RecebimentoPos implements Entidade {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getNsu() {
-        return nsu;
-    }
-
-    public void setNsu(String nsu) {
-        this.nsu = nsu;
     }
 
     public String getRecibo() {

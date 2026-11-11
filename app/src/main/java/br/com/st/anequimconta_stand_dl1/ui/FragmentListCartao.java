@@ -22,16 +22,13 @@ import br.com.st.anequimconta_stand_dl1.databinding.FragmentListCartaoBinding;
 import br.com.st.anequimconta_stand_dl1.entidade.Caixa;
 import br.com.st.anequimconta_stand_dl1.impressao.controle.ControlePosReimpressao;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.OnControlePosReimpressao;
-import br.com.st.anequimconta_stand_dl1.pospag.ControlePosConected;
 import br.com.st.anequimconta_stand_dl1.pospag.OnListPagamentos;
-import br.com.st.anequimconta_stand_dl1.pospag.OnPosPagConnect;
 import br.com.st.anequimconta_stand_dl1.pospag.PosApi;
-import br.com.st.anequimconta_stand_dl1.pospag.PosApiBuilder;
 import br.com.st.anequimconta_stand_dl1.pospag.PosFilter;
-import br.com.st.anequimconta_stand_dl1.pospag.PosPagType;
 import br.com.st.anequimconta_stand_dl1.pospag.PosPagamentoView;
 import br.com.st.anequimconta_stand_dl1.pospag.TipoRecebimentoPos;
 import br.com.st.anequimconta_stand_dl1.pospag.controle.ControleListCancelamento;
+import br.com.st.anequimconta_stand_dl1.pospag.payCielo.PosApiPayCielo;
 import br.com.st.anequimconta_stand_dl1.util.UtilSet;
 
 import java.text.SimpleDateFormat;
@@ -53,7 +50,8 @@ public class FragmentListCartao extends Fragment implements OnListPagamentos, On
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentListCartaoBinding.inflate(inflater, container, false) ;// Inflate the layout for this fragment
-        posApi = PosApiBuilder.getApi(FragmentListCartao.this);
+        AndroidThreeTen.init(getActivity()) ;
+        posApi = new PosApiPayCielo(FragmentListCartao.this);
         controleListCancelamento = new ControleListCancelamento(FragmentListCartao.this) {
             @Override
             public void cancelamentoOk() {
@@ -67,29 +65,15 @@ public class FragmentListCartao extends Fragment implements OnListPagamentos, On
             }
         } ;
         controlePosReimpressao = new ControlePosReimpressao(FragmentListCartao.this) ;
-        AndroidThreeTen.init(getActivity()) ;
         return binding.getRoot();// inflater.inflate(R.layout.fragment_list_cartao, container, false);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        conexaoPOS() ;
+        getPagamentos();
     }
 
-    private void conexaoPOS(){
-        ControlePosConected.getControlePagConected(getActivity()).executar(new OnPosPagConnect() {
-            @Override
-            public void connected(PosPagType tipo) {
-                getPagamentos();
-            }
-
-            @Override
-            public void erro(String msg) {
-                alertSair(msg) ;
-            }
-        });
-    }
 
     private void getPagamentos() {
         new ControleCaixa(getActivity()) {
@@ -189,6 +173,7 @@ public class FragmentListCartao extends Fragment implements OnListPagamentos, On
                 .setPositiveButton("Ok", (dialogInterface, i) -> voltar())
                 .show();
     }
+
     private void voltar(){
         requireActivity().onBackPressed();
     }

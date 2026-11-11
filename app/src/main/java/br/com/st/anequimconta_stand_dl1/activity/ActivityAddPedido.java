@@ -17,21 +17,26 @@ import com.journeyapps.barcodescanner.ScanContract;
 import com.journeyapps.barcodescanner.ScanOptions;
 
 import br.com.st.anequimconta_stand_dl1.R;
+import br.com.st.anequimconta_stand_dl1.controle.ControleCartaoRFid;
+import br.com.st.anequimconta_stand_dl1.controle.listeners.OnControleCartaoRFid;
 import br.com.st.anequimconta_stand_dl1.databinding.ActivityAddPedidoBinding;
 
 import br.com.st.anequimconta_stand_dl1.controle.ControleAddPedido;
 import br.com.st.anequimconta_stand_dl1.controle.listeners.OnControleAddPedido;
+import br.com.st.anequimconta_stand_dl1.entidade.CartaoRFid;
 import br.com.st.anequimconta_stand_dl1.entidade.Conta;
 import br.com.st.anequimconta_stand_dl1.pospag.payCielo.services.OnCrachaLidoListener;
 import br.com.st.anequimconta_stand_dl1.pospag.payCielo.services.LeituraCracha;
+import br.com.st.anequimconta_stand_dl1.util.ConfiguracoesOperacionais;
 
-public class ActivityAddPedido extends AppCompatActivity implements View.OnClickListener, OnControleAddPedido, OnCrachaLidoListener {
+public class ActivityAddPedido extends AppCompatActivity implements View.OnClickListener, OnControleAddPedido, OnControleCartaoRFid, OnCrachaLidoListener {
 
     private final String TAG = "addpedido" ;
     private ActivityAddPedidoBinding binding ;
     private long num_pedido = 0 ;
     private ControleAddPedido controleAddPedido ;
     private LeituraCracha leituraCracha;
+    private CartaoRFid cartaoRFid ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,19 +66,17 @@ public class ActivityAddPedido extends AppCompatActivity implements View.OnClick
 
 
     private void addCodigo() {
-        barcodeLauncher.launch(new ScanOptions());
+        barcodeLauncher.launch(new ScanOptions().setDesiredBarcodeFormats(ScanOptions.QR_CODE));
     }
 
     private final ActivityResultLauncher<ScanOptions> barcodeLauncher =
             registerForActivityResult(new ScanContract(), result -> {
                 Log.i(TAG, "ActivityResultLauncher") ;
                 if (result.getContents() != null) {
-                    entrar(result.getContents()) ;
+                    getCartaoRFid(result.getContents()) ;
                     // Handle success
                 }
             });
-
-
 
     @Override
     protected void onResume() {
@@ -82,13 +85,15 @@ public class ActivityAddPedido extends AppCompatActivity implements View.OnClick
    //     rfidReceiver.config();
     }
 
+    private void getCartaoRFid(String rfid){
+        new ControleCartaoRFid(this, this).pesquisar(rfid);
+    }
 
     @Override
     protected void onPause() {
         super.onPause();
         leituraCracha.desconectar() ;
     }
-
 
     // Tradução exata do código que você encontrou para Java nativo
     private void dispararLeituraCieloMifare() {
@@ -165,25 +170,30 @@ public class ActivityAddPedido extends AppCompatActivity implements View.OnClick
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.b0) addNumero("0") ;
-        else if (view.getId() == R.id.b1) addNumero("1") ;
-        else if (view.getId() == R.id.b2) addNumero("2") ;
-        else if (view.getId() == R.id.b3) addNumero("3") ;
-        else if (view.getId() == R.id.b4) addNumero("4") ;
-        else if (view.getId() == R.id.b5) addNumero("5") ;
-        else if (view.getId() == R.id.b6) addNumero("6") ;
-        else if (view.getId() == R.id.b7) addNumero("7") ;
-        else if (view.getId() == R.id.b8) addNumero("8") ;
-        else if (view.getId() == R.id.b9) addNumero("9") ;
-        else if (view.getId() == R.id.bEntrar) entrar() ;
-        else if (view.getId() == R.id.bApagar)  apagar() ;
-        else alert("Opção não encontrada "+view.getId());
+       if (ConfiguracoesOperacionais.getConfOperacional(this, ConfiguracoesOperacionais.operacao.lib_dig)) {
+           if (view.getId() == R.id.b0) addNumero("0");
+           else if (view.getId() == R.id.b1) addNumero("1");
+           else if (view.getId() == R.id.b2) addNumero("2");
+           else if (view.getId() == R.id.b3) addNumero("3");
+           else if (view.getId() == R.id.b4) addNumero("4");
+           else if (view.getId() == R.id.b5) addNumero("5");
+           else if (view.getId() == R.id.b6) addNumero("6");
+           else if (view.getId() == R.id.b7) addNumero("7");
+           else if (view.getId() == R.id.b8) addNumero("8");
+           else if (view.getId() == R.id.b9) addNumero("9");
+           else if (view.getId() == R.id.bEntrar) entrar();
+           else if (view.getId() == R.id.bApagar) apagar();
+           else alert("Opção não encontrada " + view.getId());
+       } else alert("Use o Cartão ou o QRCode!");
     }
 
     @Override
     public void numeroPedidoLiberado(String num) {
         Intent i = new Intent() ;
         i.putExtra("NUMERO", String.valueOf(num)) ;
+        if (cartaoRFid != null)
+          i.putExtra("FRID_ID", cartaoRFid.getId()) ;
+         else i.putExtra("FRID_ID", 0) ;
         setResult(RESULT_OK, i);
         finish();
     }
@@ -193,7 +203,7 @@ public class ActivityAddPedido extends AppCompatActivity implements View.OnClick
         new AlertDialog.Builder(this)
                 .setIcon(R.drawable.ic_notification)
                 .setTitle("Atenção")
-                .setMessage("Conta git branch -M master[ "+c.getNUMERO()+" ] foi emitida, deseja liberar?")
+                .setMessage("Conta [ "+c.getNUMERO()+" ] foi emitida, deseja liberar?")
                 .setCancelable(false)
                 .setPositiveButton("Sim", (dialogInterface, i) -> controleAddPedido.liberar(c))
                 .setNegativeButton("Não", (dialogInterface, i) -> {
@@ -214,11 +224,22 @@ public class ActivityAddPedido extends AppCompatActivity implements View.OnClick
                 .show();
     }
 
+    @Override
+    public void OnControleRFid(CartaoRFid rfid) {
+        cartaoRFid = rfid ;
+        numeroPedidoLiberado(String.valueOf(cartaoRFid.getNUMERO())) ;
+    }
+
+    @Override
+    public void OnControleRFidErro(String msg) {
+        numeroPedidoErro(msg) ;
+    }
 
     @Override
     public void onCrachaDetectado(String codigoUid) {
         Log.i(TAG, "onCrachaDetectado "+codigoUid) ;
-        numeroPedidoErro(codigoUid) ;
+       // numeroPedidoErro(codigoUid) ;
+        getCartaoRFid(codigoUid) ;
     }
 
     @Override

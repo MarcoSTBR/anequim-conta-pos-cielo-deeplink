@@ -16,7 +16,7 @@ import br.com.st.anequimconta_stand_dl1.controle.ControleFecharCaixa;
 import br.com.st.anequimconta_stand_dl1.controle.listeners.ListenerImpRelatorioFechamento;
 import br.com.st.anequimconta_stand_dl1.databinding.FragmentCaixaBinding;
 import br.com.st.anequimconta_stand_dl1.entidade.Caixa;
-import br.com.st.anequimconta_stand_dl1.impressao.ImpressaoBitmapBuilder;
+import br.com.st.anequimconta_stand_dl1.impressao.cielo.ImpressaoBitmap;
 import br.com.st.anequimconta_stand_dl1.impressao.controle.ControleImpRelatorioFechamento;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.ListenerImpressaoBipMap;
 import br.com.st.anequimconta_stand_dl1.impressao.listener.OnImpressaoBitMap;
@@ -39,8 +39,7 @@ public class FragmentCaixa extends Fragment implements ListenerImpressaoBipMap {
         // Inflate the layout for this fragment
         binding = FragmentCaixaBinding.inflate(inflater, container, false) ;
         binding.btVoltar.setOnClickListener(view-> voltar());
-      //  onImpressaoBitMap = new ImpressaoBitmapBuilder(getActivity(), this).getImpressao(FragmentCaixa.this) ;
-        onImpressaoBitMap = new ImpressaoBitmapBuilder(getActivity(), this).getImpressao(FragmentCaixa.this) ;
+        onImpressaoBitMap = new ImpressaoBitmap(this, this) ;
         return binding.getRoot();
     }
 

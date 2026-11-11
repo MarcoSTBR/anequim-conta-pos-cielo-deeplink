@@ -5,22 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context="br.com.st.anequimconta_stand_dl1.activity.ActivityEnvioPedidos">
 
     <TextView
         android:id="@+id/txtmensagem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="40sp"
+        android:text="Ambiente"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"/>
+
     <ImageView
         android:id="@+id/bitmensagem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_conta_print"
         android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/grade_ambiente"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        tools:itemCount="3"
+        tools:listitem="@layout/layout_grade_ambiente" />
+
 
 </LinearLayout>
